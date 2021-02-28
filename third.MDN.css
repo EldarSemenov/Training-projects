@@ -1,0 +1,25 @@
+th {
+  border: 1px solid blue;
+  color: red;
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;  
+  padding: 10px 20px;
+  
+}
+tr {
+  border: 1px solid blue;
+
+}
+td {
+  border: 1px solid blue;
+  padding: 10px 20px;
+}
+table {
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-indent: initial;
+}
+html {
+  font-family: sans-serif;
+}

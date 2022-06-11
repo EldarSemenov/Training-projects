@@ -1,5 +1,23 @@
+export default class NumericHelper {
+    constructor(number) {
+        this.number = number;
+    }
+    isEven() {
+        return this.number % 2 === 0;
+    }
+    isOdd() {
+        return this.number % 2 === 1;
+    }
+}
 
-document.getElementById('title').innerHTML = "WELCOME";
-document.getElementById('first-paragraph').innerHTML = "Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wnating to share ideas, tips, and photos with other like-minded people.";
-document.getElementById('second-paragraph').innerHTML = "So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!";
-document.getElementById('third-paragraph').innerHTML = "P.S. The project: 'MDN Mozilla; Document and website structure' was made by Eldar Semenov :)"
+export class FetchWrapper {
+    constructor(baseURL) {
+        this.baseURL = baseURL;
+    }
+    get(endpoint) {
+        return fetch(this.baseURL + endpoint, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        }).then(response => response.json());
+    }
+}

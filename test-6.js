@@ -1,34 +1,26 @@
-// 6. Arrays
+// 7. Arrays II & callbacks
 
-const values = [10, false, 'John'];
-
-// .LENGTH PROPERTY
-
-console.log(values.length); // 3
-
-// GET ELEMENT BY INDEX
-
-console.log(values[1]); // false
-
-// ADDING AN ELEMENT
-
-values.push(20);
-console.log(values); // [10, false, 'John', 20]
+// EXERCISE
 
 /*
-That's because const means you can only assign 
-the variable once when it's defined. But it 
-doesn't mean the variable is immutable. 
-Its content can change. What's the benefit of 
-declaring it as a const you ask? The benefit 
-is that once you define it as an array, it 
-will always stay as an array which means you can 
-safely call array methods on it. However, 
-the array content can change.
- */
+Implement the getVotersCount function such 
+that it returns the number of citizens that 
+are allowed to vote (must be 18 years or older).
+*/
 
-const grades = [10, 8, 13];
+function getVotersCounts(ages) {
+    return ages.filter(function(age) {
+        return age >= 18;
+    }).length;
+}
+console.log(getVotersCounts([10, 19, 25, 89, 77, 13, 15, 17, 9])); // 4
 
-grades.forEach(grade => {
-    console.log(grade);
-})
+// or without chaining
+
+function getVotersCounts(ages) {
+    const filteredVoters = ages.filter(function(age) {
+        return age >= 18;
+    });
+    return filteredVoters.length;
+}
+console.log(getVotersCounts([10, 19, 25, 89, 77, 13, 15, 17, 9])); // 4

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+}
+.auto-fit-layout > *,
+.auto-fill-layout > * {
+    outline: 2px dashed rgba(0 0 0 / 60%);
+}
+.auto-fit-layout {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 10px;
+    outline: 1px solid red;
+}
+.auto-fill-layout {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 10px;
+    outline: 1px solid red;
+
+}
+code {
+    color: green;
+}

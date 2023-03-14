@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid rgba(0 0 0 / 10%); */
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+}
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.card-image {
+    background-image: url("https://res.cloudinary.com/dbfn5lnvx/image/upload/v1646915250/learnhtmlcss/images/travel-small.jpg");
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 100px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    border: 1px solid #C4CFDC;
+    border-radius: 4px;
+    background-color: white;
+}
+.card-details {
+    padding: 15px;
+    flex: 1;
+}
+.card-details h2 {
+    margin-top: 0px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.card-details p {
+    color: #485467;
+    line-height: 1.3;
+}
+.ideas-greed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}

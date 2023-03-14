@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container {
+    padding: 20px;
+    max-width: 960px;
+    margin-inline: auto;
+    border: 0.1px solid rgba(0 0 0 / 10%);
+    margin-top: 10px;
+}
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0 0 0 / 30%);
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 75px);
+    gap: 10px;
+}
+
+.day:first-child {
+    grid-column-start: 3;
+}
+@media (max-width: 25rem) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+    .day:first-child {
+        grid-column-start: 1;
+    }
+}

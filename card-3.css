@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+}
+.page-layout > * {
+    outline: 0.1px solid rgba(0 0 0 / 40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.page-layout {
+    min-height: 400px;
+    margin-top: 20px;
+    margin-inline: 30px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+header {
+    grid-column: 1 / -1;
+}
+footer {
+    grid-column: 1 / -1;
+}

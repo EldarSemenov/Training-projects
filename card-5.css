@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+}
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.day {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 75px);
+    grid-auto-rows: 75px;
+    gap: 3px;
+}
+@media (max-width: 40rem) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+}

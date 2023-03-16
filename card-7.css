@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+.container {
+    max-width: 960px;
+    padding: 20px;
+    margin-inline: auto;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 75px;
+    gap: 10px;
+}
+.day {
+    border: 0.1px solid rgba(0 0 0 / 50%);
+    display: grid;
+    place-items: center;
+}
+.day:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+@media (max-width: 40rem) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+}

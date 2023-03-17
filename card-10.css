@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    background-color: #85144b;
+    color: white;
+}
+.hex-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr; /* or: repeat(5, 1fr 2fr) 1fr; */
+    grid-auto-rows: 20vh;
+    gap: 20px;
+}
+.hex {
+    background-color: white;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hex:nth-child(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+.hex:nth-child(2) {
+    grid-column: 3 / span 3;
+    grid-row: 2 / span 2;
+}
+.hex:nth-child(3) {
+    grid-column: 5 / span 3;
+    grid-row: 1 / span 2;
+}
+.hex:nth-child(4) {
+    grid-column: 7 / span 3;
+    grid-row: 2 / span 2;
+}
+.hex:nth-child(5) {
+    grid-column: 9 / span 3;
+    grid-row: 1 / span 2;
+}

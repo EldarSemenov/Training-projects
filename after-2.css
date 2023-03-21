@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    color-scheme: light;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+}
+input, textarea, button, select {
+    font: inherit;
+}
+fieldset {
+    border: 0.1px solid #001f3f;
+    margin: 10px;
+    max-width: 500px;
+}
+legend {
+    background-color: #001f3f;
+    padding: 5px 10px;
+    border-radius: 7px;
+    color: #FFFFFF;
+}
+h1 {
+    margin-left: 20px;
+    font-weight: 100;
+}

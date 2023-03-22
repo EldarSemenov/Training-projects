@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+.container {
+    max-width: 800px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    /* outline: 0.1px dashed #999; */
+    background-color: #a0cc91;
+    border-radius: 6px;
+}
+input, textarea, button, select {
+    font: inherit;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "first last"
+    "email email"
+    "submit submit";
+    gap: 20px;
+}
+.for-email {
+    grid-area: email;
+}
+.form-submit {
+    grid-area: submit;
+}
+.input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 9px 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+.submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #3d9970;
+    font-weight: bold;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+h1 {
+    color: #142c0c;
+    font-weight: 200;
+}

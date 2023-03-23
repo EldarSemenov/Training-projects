@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    color-scheme: dark light;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+input, textarea, button, select {
+    font: inherit;
+}
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+    outline: 0.1px solid #FFFFFF;
+    border-radius: 3px;
+}
+.feeds {
+    padding-left: 0;
+}
+.feed {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.feed:last-child::before {
+    content: initial;
+}
+.feed:last-child {
+    border-bottom: 0;
+}
+.feed-content {
+    flex: 1;
+    font-size: 14px;
+}
+.feed-content-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+.feed-content-activity {
+    margin: 0;
+    padding-top: 8px;
+    color: #667;
+}
+.feed time {
+    color: #5bfeff;
+    font-size: 14px;
+}
+.feed::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    height: 30px;
+    width: 1px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #5bfeff;
+    top: 40px;
+    left: 10px;
+}

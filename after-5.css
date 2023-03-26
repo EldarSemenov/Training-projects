@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+    background-color: #DDD;
+}
+input, textarea, button, select {
+    font: inherit;
+}
+button {
+    all: unset;
+    outline: revert;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: translate 200ms, opacity 200ms;
+}
+button:hover {
+    opacity: 1;
+}
+button:active {
+    translate: 3px 3px;
+}

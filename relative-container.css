@@ -1,0 +1,23 @@
+.relative-container {
+    border: 5px solid white;
+    width: 25vw;
+    height: 320px;
+    color: white;
+    text-align: center;
+}
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(249, 144, 144);
+    color: #edf513;
+    padding-top: 20px;
+    margin-left: 5px;
+}
+#two {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    background-color: #edf513;
+    color: #000;
+}

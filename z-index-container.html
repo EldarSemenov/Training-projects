@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="z-index-container.css">
+    <title>z-index</title>
+</head>
+<body>
+    <div class="z-index-container">
+        <div class="navigation">navigation
+            <div class="child-1">child-1</div>
+            <div class="child-2">child-2 (on the top of all blocks)</div>
+            <div class="child-3">child-3</div>
+        </div>
+        <div class="section-1">section-1</div>
+        <div class="section-2">section-2</div>
+        <div class="footer">footer
+            <div class="box"></div>
+        </div>
+        <div class="description">
+            <h1>Z-index. Description</h1>
+            <p>My task was to make the child-2 on the top
+                of all blocks. If we just add z-index to this child,
+                it's not gonna work since its parent on the 
+                bottom of the stacking context. To achive the result 
+                I just added z-index to his parent on hover pseudo class to 
+                make its child-2 on the top of all elements.
+                And also I gave z-index: 2; to the child-2 to be higher than 
+                its parent. Place your cursour on the navigation purple block.
+                See also <a href="isolation.html">isolation</a> method.
+            </p>
+        </div>
+        <div class="ps">
+            <p>P.S. The light-blue hidden circle that you see has the position absolute,
+                his parent footer container has overflow: hidden. If you work with the 
+                <code>< body ></body></code><code>overflow:hidden;</code>,
+                add the same to the < html >. Also its working if you use overflow: auto; 
+            </p>
+        </div>
+    </div>
+</body>
+</html>

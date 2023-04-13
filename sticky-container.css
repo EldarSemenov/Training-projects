@@ -1,0 +1,59 @@
+h2 {
+    color: white;
+}
+.sticky-container {
+   border: 5px solid white;
+   margin: 0 6px;
+   width: 45vw;
+   height: 1020px;
+}
+.sticky-container p {
+    color: white;
+    margin: 0 5px;
+}
+.ireland-parent-container  {
+    border: 3px solid #ffc111;
+    margin: 10px;
+}
+.usa-parent-container  {
+    border: 3px solid #028cb7;
+    margin: 10px;
+}
+.canada-parent-container {
+    border: 3px solid #5cfe05;
+    margin: 10px;
+    position: relative;
+}
+.germany-parent-container {
+    border: 3px solid #0d54d6;
+    margin: 10px;
+}
+.country-parent {
+   background-color: black;
+}
+.country {
+    border: 2px solid #ffc111;
+    margin: 6px;
+    color: white;
+    font-size: 1.4rem;
+    background-color: rgb(107, 104, 104);
+    position: sticky;
+    top: 0px;
+}
+.country:hover {
+    cursor: pointer;
+    background-color: rgb(7, 90, 235);
+    color: #010708;
+}
+.city {
+    border: 0.1px solid #027358;
+    margin: 6px;
+    color: white;
+    text-align: center;
+    padding: 6px 0;
+}
+.city:hover {
+    cursor: pointer;
+    color: #00c4e0;
+    text-decoration: underline;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Project.css">
+    <title>CSS Project</title>
+</head>
+<body>
+
+  <h1 class="heading">CSS PROJECT</h1>
+
+   <div class="main-container">
+
+  <div class="sticky-container">
+    <h2>Description of the W3School of the <code>Sticky Position</code></h2>
+    <p>An element with position: sticky; is positioned 
+        based on the user's scroll position. A sticky 
+        element toggles between relative and fixed, 
+        depending on the scroll position. It is positioned 
+        relative until a given offset position is met in the 
+        viewport - then it "sticks" in place (like position:fixed). 
+        Note: Internet Explorer, Edge 15 and earlier versions do not 
+        support sticky positioning. Safari requires a -webkit- prefix 
+        (see example below). You must also specify at least one of top, 
+        right, bottom or left for sticky positioning to work.</p>
+        <div class="ireland-parent-container country-parent">
+            <div class="country">Ireland</div>
+            <div class="city">Dublin</div>
+            <div class="city">Cork</div>
+            <div class="city">Belfast</div>
+            <div class="city">Mullingar</div>
+        </div>
+        <div class="usa-parent-container country-parent">
+            <div class="country">USA</div>
+            <div class="city">Minneapolis</div>
+            <div class="city">New-York</div>
+            <div class="city">Washington</div>
+            <div class="city">Tampa</div>
+        </div>
+        <div class="canada-parent-container country-parent">
+            <div class="country">Canada</div>
+            <div class="city">Toronto</div>
+            <div class="city">Calgary</div>
+            <div class="city">Vancouver</div>
+            <div class="city">Winnipeg</div>
+            <h3 class="badge">RECOMENDED</h3>
+        </div>
+        <div class="germany-parent-container country-parent">
+            <div class="country">Germany</div>
+            <div class="city">Frankfurt</div>
+            <div class="city">Essen</div>
+            <div class="city">Dortmund</div>
+            <div class="city">Bonn</div>
+        </div>
+  </div>
+
+
+  <div class="relative-container">
+    <h2><code>Relative Container</code></h2>
+    <p>Box of the relative positioning only. It's outside of the both parents.
+        You can place this box wherever you wnat.
+        W3School: An element with position: relative; 
+        is positioned relative to its normal position. 
+        Setting the top, right, bottom, and left properties of 
+        a relatively-positioned element will cause it to be adjusted 
+        away from its normal position. Other content <span>will not!</span> 
+        be adjusted to fit into any gap left by the element</p>
+        <div></div> <!--To make a gap-->
+            <div class="box" id="one">One</div>
+            <div class="box" id="two">Two</div>
+            <div class="box" id="three">Three</div>
+            <div class="box" id="four">Four</div>
+  </div>
+
+  <div class="fixed-container">
+    <h2><code>Fixed container</code></h2>
+    <p>Description of the W3School: An element with position: fixed; is positioned relative to 
+        the viewport, which means it always stays in the same place 
+        even if the page is scrolled. The top, right, bottom, and 
+        left properties are used to position the element.</p>
+  </div>
+  <div class="links">
+  <a href="z-index-container.html">Z-INDEX link</a>
+  <a href="isolation.html">ISOLATION link</a>
+  <a href="float.html">Float</a>
+  </div>
+
+
+  </div>
+
+
+
+    
+</body>
+</html>

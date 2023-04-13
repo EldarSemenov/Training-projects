@@ -1,0 +1,61 @@
+@import url("sticky-container.css");
+@import url("relative-container.css");
+@import url("fixed-container.css");
+@import url("badge.css");
+@import url("relative-overflow.css");
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+    border: 5px solid white;
+    margin: 10px;
+    background-color: #030221;
+    height: 2000px;
+}
+:root {
+    --color-code: #11e1ff;
+    --color-span: #9cfc46;
+}
+.heading {
+    color: white;
+    font-size: 3rem;
+    margin: 6px 6px;
+    padding: 0px 12px;
+    border: 0.1px solid white;
+    width: fit-content;
+}
+code {
+    font-size: 2rem;
+    color: var(--color-code);
+}
+span {
+    color: var(--color-span);
+}
+.main-container {
+    display: flex;
+}
+a {
+    color: white;
+    position: relative;
+    top: 400px;
+    right: 120px;
+    font-size: 3rem;
+}
+a:hover {
+    color: #11e1ff;
+}
+a:active {
+    color: #9cfc46;
+}
+.links {
+    border: 1px solid white;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.links a {
+    margin: 20px;
+    text-align: center;
+}

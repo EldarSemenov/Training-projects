@@ -1,0 +1,15 @@
+.fixed-container {
+    border: 5px solid white;
+    height: 320px;
+    margin-left: 5px;
+    width: 27vw;
+    text-align: center;
+    color: white;
+    position: fixed;
+    right: 25px;
+    top: 85px;
+    background-image: url("/images/felix-besombes-F7E2_IQZu9k-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}

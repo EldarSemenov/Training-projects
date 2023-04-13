@@ -1,0 +1,17 @@
+.badge {
+    position: absolute;
+    color: white;
+    top: 80px;
+    right: -8px;
+    rotate: -45deg;
+    background-color: black;
+    border: 2px solid yellow;
+    padding: 10px;
+}
+.badge:hover {
+    color: black;
+    background-color: yellow;
+    right: -4px;
+    top: 70px;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+@import url("header.css");
+@import url("first-worker.css");
+@import url("second-worker.css");
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+.container {
+    background-image: url('/images/alexa-williams-RaYjMmmaSCA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 0%;
+    background-origin: border-box;
+    background-clip: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    filter: grayscale(70%) blur(1px);
+}
+h2 {
+    outline: 1px dashed black;
+    width: fit-content;
+    margin: 100px;
+    padding: 0;
+}

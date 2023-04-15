@@ -1,0 +1,27 @@
+.second-worker {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 500px;
+    right: 100px;
+    width: 900px;
+    height: 300px;
+    border: 0.1px solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(#d0f7f0, #7f7f86);
+    opacity: 0.8;
+
+}
+.image {
+    background-image: url("/images/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg");
+    background-position: 10% 10%;
+    background-size: cover;
+    width: 700px;
+    height: 299px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.content {
+    margin-left: 20px;
+}

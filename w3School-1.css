@@ -1,0 +1,21 @@
+div {
+    background-color: green;
+}
+.one {
+    opacity: 0.1;
+}
+.two {
+    opacity: 0.3;
+}
+.three {
+    opacity: 0.6;
+}
+.first {
+    background: rgba(0, 128, 0, 0.1);
+}
+.second {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+.third {
+    background-color: rgba(0, 128, 0, 0.6);
+}

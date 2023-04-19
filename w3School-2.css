@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: rgba(0 0 0 / 70%);
+}
+h1 {
+    color: white;
+    border: 8px dashed black;
+    margin: 60px 60px;
+    width: 1000px;
+    padding: 40px;
+    background-image: linear-gradient(to right, #0c82a8, #5b80ec, #2dcbc3);
+}
+.border-box {
+    background-clip: border-box;
+}
+.padding-box {
+    background-clip: padding-box;
+}
+.content-box {
+    background-clip: content-box;
+}
+.text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

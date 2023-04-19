@@ -1,0 +1,46 @@
+p {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    padding: 20px;
+}
+.dotted {
+    border-style: dotted;
+}
+.dashed {
+    border-style: dashed;
+}
+.solid {
+    border-style: solid;
+}
+.double {
+    border-style: double;
+}
+.groove {
+    border-style: groove;
+    border-width: 10px;
+}
+.ridge {
+    border-style: ridge;
+    border-width: 10px;
+}
+.inset {
+    border-style: inset;
+    border-width: 10px;
+}
+.outset {
+    border-style: outset;
+    border-width: 10px;
+}  
+.none {
+    border-style: none;
+} 
+.hidden {
+    border-style: hidden;
+} 
+.mixed {
+    border-style: dotted solid dashed double;
+    border-width: 10px;
+}
+.own {
+    border-left: 10px solid dodgerblue;
+}

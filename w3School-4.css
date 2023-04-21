@@ -1,0 +1,18 @@
+p {
+    font-size: 1.2rem;
+}
+.baseline {
+    vertical-align: baseline;
+}
+.text-top {
+    vertical-align: text-top;
+}
+.text-bottom {
+    vertical-align: text-bottom;
+}
+.sub {
+    vertical-align: sub;
+}
+.sup {
+    vertical-align: super;
+}

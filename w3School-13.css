@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    outline: 0.1px dashed rgba(0 0 0 / 20%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+.heading {
+    max-width: 960px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+.heading p {
+    letter-spacing: -1px;
+    word-spacing: 10px;
+    font-weight: thin;
+}
+h1 {
+    color: #fc1510;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 254px;
+    left: -100px;
+    background-color: black;
+    min-width: 260px;
+    box-shadow: 8px 8px 8px rgba(0 0 0 / 40%);
+    z-index: 1;
+}
+.description {
+    padding: 16px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.description.calgary {
+    color: #4fba3e;
+    background-color: antiquewhite;
+}
+.description.vancouver {
+    color: dodgerblue;
+    background-color: burlywood;
+}
+.description.edmonton {
+    color: #ef140f;
+    background-color: bisque;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.container {
+    max-width: 960px;
+    margin-inline: auto;
+    text-align: center;
+}

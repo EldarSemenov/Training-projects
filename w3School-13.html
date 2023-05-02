@@ -12,36 +12,24 @@
 </head>
 <body>
 
-<div class="heading">
-<h1>Choose a city of Canada</h1>
-<p>Just hover over these small photos</p>
-</div>
 
+<h3>Using CSS to style an HTML Form</h3>
+<div>
+    <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
 
-<div class="container">
-<div class="dropdown">
-    <img src="/images/calgary.jpg" alt="calgary" width="200" height="250">
-    <div class="dropdown-content">
-        <img src="/images/calgary.jpg" alt="calgary" width="400" height="450">
-        <div class="description calgary">Calgary</div>
-    </div>
-</div>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
 
-<div class="dropdown">
-    <img src="/images/edmonton.jpg" alt="calgary" width="200" height="250">
-    <div class="dropdown-content">
-        <img src="/images/edmonton.jpg" alt="calgary" width="400" height="450">
-        <div class="description edmonton">Edmonton</div>
-    </div>
-</div>
-
-<div class="dropdown">
-    <img src="/images/vancouver.jpg" alt="vancouver" width="200" height="250">
-    <div class="dropdown-content">
-        <img src="/images/vancouver.jpg" alt="vancouver" width="400" height="450">
-        <div class="description vancouver">Vancouver</div>
-    </div>
-</div>
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
 

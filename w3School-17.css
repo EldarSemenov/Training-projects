@@ -1,0 +1,12 @@
+#example1 {
+    border: 1px solid black;
+    background: 
+    url("/images/curtaiins.jpg") left no-repeat, 
+    url("/images/small-tree.jpg") right no-repeat,
+    url("/images/paper.jpg");
+    background-size: contain, contain, cover;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px white;
+    color: dodgerblue;
+}

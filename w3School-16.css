@@ -1,0 +1,7 @@
+#example1 {
+    background-image: url("/images/small-tree.jpg"), url('/images/paper.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 15px;
+    background-size: 200px 179px, cover;
+}

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "fog-lighten";
+    src: local("fog lighten"),
+    local("fog-lighten"),
+    url("/font-source/foglihten/FoglihtenNo03.otf");
+}
+@font-face {
+    font-family: "foglighten-068";
+    src: url("./font-source/foglihten/Foglihten-068.otf");
+}
+@font-face {
+    font-family: "foglighten-black";
+    src: url("./font-source/foglihten/FoglihtenBlackPcs-fMac.otf");
+}
+@font-face {
+    font-family: "fog-lighten-01";
+    src: url("./font-source/foglihten/FoglihtenNo01.otf");
+}
+h1 {
+    font-family: "fog-lighten";
+    font-size: 6rem;
+    font-weight: 100;
+}
+h2 {
+    font-family: "foglighten-068";
+    font-size: 4rem;
+}
+h3 {
+    font-family: "foglighten-black";
+    font-size: 4rem;
+}
+h4 {
+   font-family: "fog-lighten-01";
+   font-size: 3rem;
+   font-weight: 100;
+}

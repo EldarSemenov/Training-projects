@@ -1,0 +1,1184 @@
+
+/* transform: translate() */
+  /* html: 
+   <h1>The translate() Method</h1>
+    <p>The translate() method moves an element from 
+       its current position:
+    </p>
+    <div>
+        This div element moved 50 pixels to the right,
+        and 100 pixels down from its current position.
+    </div>
+  */
+  div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: translate(50px, 100px); /* x-axis and y-axis */
+} 
+
+
+
+
+
+
+
+/* transform: rotate() */
+/* html: 
+<h1>The rotate() method</h1>
+<p>The rotate() method rotates an element 
+   clockwise or counter-clockwise if to use minus degrees.
+</p>
+<div>This a normal div element</div>
+<div id="myDiv">
+    This div element is rotated clockwise 20 degrees.
+</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+div#myDiv {
+    transform: rotate(20deg);
+}
+
+
+
+
+
+
+
+
+
+/* transform: scale() */
+/* html:
+<h1>The scale() Mthod</h1>
+<p>The scale() method increases or decreases
+    the size of an element.
+</p>
+<div>
+    This div element is 2 times of its original
+    width, and 3 times of its original height.
+</div>
+<p>
+    The scale() method increases or decreases 
+    the size of an element (according to the 
+    parameters given for the width and height).
+</p>
+*/
+div {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scale(2, 3);
+}
+/* <div class="decreased">
+This div element is decreased to be half of its original 
+width & height
+</div> */
+div.decreased {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scale(0.5, 0.5);
+}
+
+
+
+
+
+
+
+
+
+/* transform: scaleX(); */
+/* 
+html: 
+<h1>The scaleX() Mthod</h1> 
+<p>
+    The scaleX() method increases or decreases
+    the width of an element.
+</p>
+<div>
+    This div element is 2 times of 
+    its original width.
+</div>
+*/
+div {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scaleX(2);
+}
+/* 
+html:
+<div class="decreased">
+    This div element is half of its original width.
+</div>
+*/
+div.decreased {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scaleX(0.7);
+}
+
+
+
+
+
+
+
+
+
+
+/* transform: scaleY() */
+/* html: 
+<h1>The scaleY() Method</h1>
+<p>
+   The scaleY() method increases or decreases 
+   the height of an element.  
+</p>
+<div>This div element is 3 times of its original height.</div>
+*/
+div {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scaleY(3);
+}
+/* 
+html: 
+<div class="decreased">
+    This div element is half of its original height.
+</div>
+*/
+div.decreased {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scaleY(0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* transform: skewX(); */
+/* 
+html: 
+<h1>The skewX() Method</h1>
+<p>
+    The skewX() method skews an element
+    along the X-axis by the given angle.
+</p>
+<div>This div element is skewed 20 degrees along the X-axis</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: skewX(20deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* transform: skewY(); */
+/* html: 
+<h1>The skewY() Method</h1>
+<p>
+    The skewY() method skews an element
+    along the Y-axis by the given angle.
+</p>
+<div>This div element is skewed 20 degrees along the Y-axis.</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: skewY(20deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* transfrom: skew(); */
+/* html: 
+<h1>The skew() Method</h1>
+<p>The skew() method skews an element into a given angle.</p>
+<div>
+    This div element is skewed 20 degrees along the x-axis,
+    and 10 degrees along the Y-axis.
+</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: skew(20deg, 10deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* transform: matrix() */
+/* html: 
+<h1>The matrix() Method</h1>
+
+<p>The matrix() method combines all the
+    2D transform methods into one.
+</p>
+
+<p>
+    The matrix() method take six parameters, 
+    containing mathematic functions,
+    which allows you to rotate, scale, 
+    move (translate), and skew elements.
+</p>
+
+<p>
+    The parameters are as follow: 
+    matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+</p>
+<div>Using the matrix() method</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    border: 1px solid black;
+    transform: matrix(1, 0, 0.5, 1, 150, 0);
+    box-shadow: -10px 10px 10px rgba(0 0 0 / 50%); /* its a good method to make a show effect on the skewed box */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* transform: rotateX(); */
+/* html: 
+<h1>The rotateX() Method</h1>
+<p>
+    The rotateX method rortates an element
+    around its X-axis at a given degree.
+</p>
+<div>This div element is rotated 150 degrees.</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+div:hover {
+    transform: rotateX(150deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* transform: rotateY(); */
+/* html: 
+<h1>The rotateY() Method</h1>
+<p>
+    The rotateY() method rotates an element
+    around its Y-axis at a given degree.
+</p>
+<div>This div element is rotated 150 degrees.</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+div:hover {
+    transform: rotateY(150deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* transform: rotateZ() */
+/* html: 
+<h1>The rotateZ() Method</h1>
+<p>
+    The rotateZ method rotates an element around
+    its Z-axis at a given degree.
+</p>
+<div>This div element is rotated 90 degrees.</div>
+*/
+div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+div:hover {
+    transform: rotateZ(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* transition */
+/* 
+html:
+<h1>The transition Property</h1>
+<p>CSS transitions allows you to change property 
+    values smoothly, over a given duration.</p>
+<p>Hover over the div element below,
+   to see the transition effect: 
+</p>
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+div:hover {
+    width: 300px;
+}
+
+
+
+
+
+  
+
+
+
+
+/* <h1>Transition Property effect for several properties</h1> */
+/* 
+html:
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 4s;
+}
+div:hover {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+HTML: 
+<h1>The transition-timing-function Property</h1>
+<p>Hover over the div elements below
+   to see the different speed curves:
+</p>
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div>
+
+<p>The transition-timing-function property specifies 
+    the speed curve of the transition effect.
+</p>
+<ol>
+    <li>
+        ease - specifies a transition effect with a slow start, 
+        then fast, then end slowly (this is default)
+    </li>
+    <li>
+        linear - specifies a transition effect with the 
+        same speed from start to end
+    </li>
+    <li>
+        ease-in - specifies a transition effect with a slow start
+    </li>
+    <li>
+        ease-out - specifies a transition effect with a slow end
+    </li>
+    <li>
+        ease-in-out - specifies a transition effect with a slow start and end
+    </li>
+    <li>
+        cubic-bezier(n,n,n,n) - lets you define your own values 
+        in a cubic-bezier function
+    </li>
+</ol>
+<div>SEE MDN DOCS, THERE ARE OTHER FUNCTIONS ALSO THERE!</div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    margin: 20px;
+}
+#div1 {
+    transition-timing-function: linear;
+}
+#div2 {
+    transition-timing-function: ease;
+}
+#div3 {
+    transition-timing-function: ease-in;
+}
+#div4 {
+    transition-timing-function: ease-out;
+}
+#div5 {
+    transition-timing-function: ease-in-out;
+}
+div:hover {
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+/* transition-delay */
+/*  The transition-delay property specifies a delay (in seconds) 
+    for the transition effect */
+/* html: 
+<h1>The transition-delay Property</h1>    
+<p>Hover over the div element below, 
+    to see the transition effect:
+</p>
+<div></div>
+<p><b>Note:</b> The transition effect has a 
+1 second delay before starting.</p>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 3s;
+    transition-delay: 1s;
+}
+div:hover {
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>Transition + Transform</h1>
+<p>Hover over the div element below:</p>
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s, height 2s, transform 2s;
+}
+div:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* The CSS transition properties
+can be specified one by one, like this: */
+/* html: 
+<h1>The transition Properties Specified One by One</h1>
+<p>
+    Hover over the div element below,
+    to see the transition effect:
+</p>
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+div:hover {
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+/* shorthand */
+/* 
+html:
+<h1>Using The transition Shorthand Property</h1>
+<p>
+    Hover over the div element below,
+    to see the transition effect:
+</p>
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s linear 1s;
+}
+div:hover {
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS ANIMATIONS */
+/* html: 
+<h1>CSS Animation</h1>
+<div></div>
+<p>
+    <b>Note:</b> When an animation is sinished,
+    it goes back to its original style.
+</p>*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+/* Note: The animation-duration property 
+defines how long an animation should take 
+to complete. If the animation-duration 
+property is not specified, no animation 
+will occur, because the default value is 0s (0 seconds). */
+
+/* In the example above we have specified when the style
+ will change by using the keywords "from" and "to"
+  (which represents 0% (start) and 100% (complete)). */
+
+/* It is also possible to use percent. By using percent, 
+you can add as many style changes as you like */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The following example will change the background-color of 
+the <div> element when the animation is 25% complete, 
+50% complete, and again when the animation is 100% complete: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The following example will change both the 
+background-color and the position of the <div> 
+element when the animation is 25% complete, 
+50% complete, and again when the animation is 100% complete: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    0% {background-color: red; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: green; left: 0px; top: 200px;}
+    100% {background-color: red; left: 0px; top: 0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* animation-delay */
+/* The animation-delay property specifies 
+a delay for the start of an animation */
+/* The following example has a 2 seconds 
+delay before starting the animation: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+@keyframes example {
+    0% {background: red; left: 0px; top: 0px;}
+    25% {background: yellow; left: 200px; top: 0px;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0px; top: 200px;}
+    100% {background: red; left: 0px; top: 0px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Negative values are also allowed. If using negative 
+values, the animation will start as if it had already 
+been playing for N seconds */
+/* In the following example, the animation will start 
+as if it had already been playing for 2 seconds: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: -2s;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: red; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SET HOW MANY TIMES AN ANIMATION SHOULD RUN */
+/* The animation-iteration-count property specifies 
+the number of times an animation should run. */
+/* The following example will run the 
+animation 3 times before it stops: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* The following example uses the value "infinite" 
+to make the animation continue for ever: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: red; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* RUN ANIMATION IN REVERSE DIRECTION OR ALTERNATE CYCLES */
+
+/* The animation-direction property specifies whether an 
+animation should be played forwards, backwards or in alternate cycles. */
+
+/* The animation-direction property can have the following values: */
+/* normal - The animation is played as normal (forwards). This is default */
+/* reverse - The animation is played in reverse direction (backwards) */
+/* alternate - The animation is played forwards first, then backwards */
+/* alternate-reverse - The animation is played backwards first, then forwards */
+
+/* The following example will run the animation in reverse direction (backwards): */
+/* html:  
+<h1>CSS Animation</h1>    
+<p>
+    The animation-direction property specifies
+    whether an animation should be played forwards,
+    backwards or in alternate cycles. The following 
+    example will run the animation in reverse direaction
+    (backwards):
+</p>
+<div></div>
+*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+/* The following example uses the value "alternate" to make 
+the animation run forwards first, then backwards */
+/* html : 
+<p>
+    The animation-direction property specifies whether 
+    an animation should be played forwards, backwards 
+    or in alternate cycles. The following example uses 
+    the value "alternate" to make the animation run forwards 
+    first, then backwards:
+</p>
+<div></div>*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0px; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The following example uses the value "alternate-reverse" 
+to make the animation run backwards first, then forwards: */
+/* html: 
+<p>The animation-direction property specifies whether an 
+   an animation ahould be played forwards, backwards or 
+   in alternate cycles. The following example uses the 
+   value "alternate-reverse" to make the animation run
+   backwards first, then forwards:
+</p>
+<div></div>*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SPECIFY THE SPEED CURVE OF THE ANIMATION */
+
+/* The animation-timing-function property specifies 
+the speed curve of the animation. */
+
+/* The animation-timing-function property can have the following values: */
+/* ease - Specifies an animation with a slow start, 
+then fast, then end slowly (this is default)*/
+/* linear - Specifies an animation with the same speed from start to end */
+/* ease-in - Specifies an animation with a slow start */
+/* ease-out - Specifies an animation with a slow end */
+/* ease-in-out - Specifies an animation with a slow start and end */
+/* cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function */
+
+/* The following example shows some of the different speed curves that can be used: */
+
+/* html: */
+/* <p>The animation-timing-function property specifies the speed
+    curve of the animation. The following example shows some
+    of the different speed curves that can be used:</p>
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div> */
+div {
+    width: 100px;
+    height: 50px;
+    background: red;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+    from {left: 0;}
+    to {left: 300px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The following example lets the <div> element get 
+the style values set by the first keyframe before 
+the animation starts (during the animation-delay period): */
+/* html: 
+<p>Let the div element get the style values set by the 
+    first keyframe before the animation starts 
+    (during the animation-delay period):</p>
+<div></div>*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+@keyframes example {
+    from {top: 0; background: yellow;}
+    to {top: 200px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The following example lets the <div> element get the 
+style values set by the first keyframe before the animation 
+starts, and retain the style values from the last keyframe 
+when the animation ends: */
+/* html: 
+<p>
+    Let the div lement get the style values set by the first 
+    keyframe before the animation starts, and retain the style 
+    values from the last keyframe when the animation ends:
+</p> 
+<div></div>*/
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+@keyframes example {
+    from {top: 0; background: yellow;}
+    to {top: 200px; background: dodgerblue;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION SHORTHAND PROPERTY */
+/* The example below uses 6 of the animation properties */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes example {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: lightgreen; left: 0; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}
+/* The same animation effect as above can be achieved 
+by using the shorthand animation property: */
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: myfirst 5s linear infinite alternate;
+}
+@keyframes myfirst {
+    0% {background: red; left: 0; top: 0;}
+    25% {background: yellow; left: 200px; top: 0;}
+    50% {background: blue; left: 200px; top: 200px;}
+    75% {background: green; left: 0; top: 200px;}
+    100% {background: dodgerblue; left: 0; top: 0;}
+}

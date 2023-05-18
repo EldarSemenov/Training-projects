@@ -1,0 +1,436 @@
+/* html: 
+<h2>Responsive Image</h2>
+<p>
+    Responsive images will automatically adjust to fit 
+    the size of the screen.
+</p>
+<p>Resize the browser window to see the effect:</p>
+<img src="/images/calgary.jpg" alt="calgary" width="1200">
+*/
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h2>Center an Image</h2>
+<p>
+    To center an image, set left and right margin
+    to auto (or margin-inline: auto), and make it 
+    into a block element. 
+</p>
+<img src="/images/vancouver.jpg" alt="vancouver" width="700" height="800">
+*/
+img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+html: 
+<h2>Responsive Polaroid Images / Cards</h2>
+<div class="polaroid">
+    <img src="/images/calgary.jpg" alt="calgary" style="width: 100%;">
+    <div class="container">
+        <p>Calgary city</p>
+    </div>
+</div>
+*/
+body {
+    margin: 25px;
+}
+div.polaroid {
+    display: block;
+    margin-inline: auto;
+    max-width: 30%;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+div.container {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+html: 
+<h1>Image Transparency</h1>
+<p>
+    The opacity property specifies the transparency of an element.
+    The lower the value, the more transparent:
+</p>
+<p>Image with 50% opacity:</p>
+<img src="/images/photographer.jpg" alt="photographer">
+*/
+img {
+    width: 20%;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h2>Image Text</h2>
+<p>Add some text to an image in the top left corner:</p>
+<div class="container">
+    <img src="/images/calgary.jpg" alt="calgary">
+    <div class="topleft">TOP LEFT</div>
+    <div class="topright">TOP RIGHT</div>
+    <div class="bottomleft">BOTTOM LEFT</div>
+    <div class="bottomright">BOTTOM RIGHT</div>
+    <div class="center">CENTER</div>
+</div>*/
+img {
+    width: 40%;
+    display: block;
+    margin-inline: auto;
+    opacity: 0.8;
+}
+.container {
+    position: relative;
+}
+.topleft {
+    position: absolute;
+    top: 8px;
+    left: 680px;
+    font-size: 1.2rem;
+}/* and so on for topleft, center */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>Image Filters</h1>
+<p>The CSS filter property adds visual effects 
+   (like blur and saturation) to an element.  
+</p>
+<div class="container">
+<img src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="blur" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="brightness" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="contrast" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="grayscale" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="huerotate" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="invert" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="opacity" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="saturate" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="sepia" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+<img class="shadow" src="/images/photographer.jpg" alt="photographer" width="200" height="200">
+</div>*/
+.container {
+    width: 1200px;
+}
+img {
+    margin: 25px;
+}
+.blur {
+    filter: blur(2px);
+}
+.brightness {
+    filter: brightness(70%);
+    /* I did like darker */
+}
+.contrast {
+    filter: contrast(180%);
+}
+.grayscale {
+    filter: grayscale(100%);
+}
+.huerotate {
+    filter: hue-rotate(180deg);
+}
+.invert {
+    filter: invert(100%);
+}
+.opacity {
+    filter: opacity(50%);
+}
+.saturate {
+    filter: saturate(7);
+}
+.sepia {
+    filter: sepia(100%);
+}
+.shadow {
+    filter: drop-shadow(6px 6px 6px green);
+}
+/* using multiple filters */
+img {
+    filter: contrast(200%) brightness(150%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h2>Fade in Overlay</h2>
+<div class="container">
+    <img class="image" src="/images/vancouver.jpg" alt="vancouver">
+    <div class="overlay">
+        <div class="text">Vancouver</div>
+    </div>
+</div>
+*/
+.container {
+    position: relative;
+    width: 50%;
+    border: 1px solid black;
+}
+.image {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background: #008CBA;
+}
+.container:hover .overlay {
+    opacity: 1;
+}
+.text {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/* container is wider than the image. fix it P.S. see below decision*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h2>Fade in a Box</h2>
+<div class="container">
+    <img class="image" src="/images/grass.jpg" alt="grass" style="width: 100%;">
+    <div class="middle">
+        <div class="text">Grass</div>
+    </div>
+</div> */
+.container {
+    position: relative;
+    width: 20%;
+}
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden; /* see MDN, there is interesting project overthere */
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.container:hover .image {
+    opacity: 0.3;
+}
+.container:hover .middle {
+    opacity: 1;
+}
+.text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 22px;
+    padding: 16px 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html:
+<h2>Slide in Overlay from the Top</h2>
+<div class="container">
+    <img class="image" src="/images/small-tree.jpg" alt="small-tree">
+    <div class="overlay">
+        <div class="text">Hello World</div>
+    </div>
+</div> */
+.container {
+    position: relative;
+    width: 20%; 
+    /* width 20% of the screen */
+}
+.image {
+    display: block;
+    width: 100%;
+    /* image width 100% of the 20% of the container */
+    height: auto;
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    /* this is the key moment which dermine that the slide will go 
+    from the top to bottom */
+    /* playing with positions: top, bottom, left and right will
+    determin from where the slide will go */
+    left: 0;
+    right: 0;
+    background: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .3s ease;
+}
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h2>Flip an Image</h2>
+<p>Move your mouse over the image.</p>
+<img src="/images/small_house.jpg" alt="small_house"> */
+img:hover {
+    transform: scaleX(-1);
+}
+
+
+
+
+
+
+
+
+
+/* When you done with JS, see again 
+w3school - css style images - image modal(advanced) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

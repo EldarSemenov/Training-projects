@@ -1,0 +1,146 @@
+/* The CSS mask-image Property */
+
+/* The mask layer image can be a PNG image, 
+an SVG image, a CSS gradient, or an SVG <mask> element. */
+
+/* Note: Most browsers only have partial support for CSS masking. 
+You will need to use the -webkit- prefix in addition 
+to the standard property in most browsers. */
+
+/* download transparent png images & keep it in a separate folder */
+
+
+
+
+/* html: 
+<div id="img"></div>
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img {
+    width: 600px;
+    height: 550px;
+    background-image: url(./images/forest.jpg);
+    background-size: cover;
+    -webkit-mask-image: url(./trans-images/hand.png);
+    mask-image: url(./trans-images/hand.png);
+    /* you can also write just -webkit-mask: like a 
+    shorthand property */
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    /* for the future, write the code without 
+    the -webkit- word also,have both variations */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The mask-image Property</h1>
+<h3>An image with a mask layer image:</h3>
+<div class="mask1">
+    <img src="/images/sec-forest.jpg" alt="sec-forest" width="600" height="500">
+</div> */
+.mask1 {
+    -webkit-mask-image: url(./trans-images/F.png);
+    mask-image: url(./trans-images/F.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* USE GRADIENTS AS THE MASK LAYER */
+/* html : 
+<h3>A linear gradient as a mask layer:</h3>
+<div class="mask1">
+    <img src="/images/calgary.jpg" alt="calgary" width="600" height="500">
+</div> */
+.mask1 {
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+    /* other colors are not working */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h3>A linear-gradient as a mask layer:</h3>
+<div class="mask1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum itaque id nisi cumque natus. Repudiandae, totam, dignissimos ea illum ut aut libero a voluptatem facere ab aspernatur iusto nulla eos enim ullam sapiente impedit quasi odio nemo incidunt suscipit deserunt quas numquam! Corporis laborum esse debitis ut vitae qui autem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatem, recusandae quisquam tempore ratione facilis officia accusantium ex, officiis repellendus nesciunt? Officiis rem aut impedit obcaecati saepe incidunt, consectetur illum exercitationem a porro alias in molestias neque dignissimos. Obcaecati pariatur dignissimos a perspiciatis ullam assumenda, quis consequatur natus nesciunt quam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni autem obcaecati est vel eos labore ut nulla asperiores, delectus at voluptates repudiandae tempore, laudantium iusto maxime! Repellendus at enim excepturi reprehenderit impedit inventore esse delectus consequatur recusandae, sapiente facere velit dicta, ducimus placeat, accusamus dolore commodi numquam reiciendis blanditiis!</p>
+</div> */
+p {
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+.mask1 {
+    max-width: 600px;
+    height: 350px;
+    overflow-y: scroll;
+    background: url(./images/forest.jpg) no-repeat;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h3>A radial gradient as a mask layer (circle):</h3>
+<div class="mask2">
+    <img src="/images/sec-forest.jpg" width="600" height="500">
+</div> */
+.mask2 {
+    -webkit-mask-image: radial-gradient(circle, black 70%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(circle, black 70%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+/* Later lern about how to use mask-image and svg */

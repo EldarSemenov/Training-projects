@@ -1,0 +1,184 @@
+/* The column-count property specifies the number 
+of columns an element should be divided into. */
+
+/* html: 
+<h1>Create Multiple Columns</h1>
+<div class="newspaper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur esse nobis deserunt tempora, nemo unde magnam officiis accusamus odio atque reprehenderit cumque perspiciatis aliquid. Quo impedit fuga error ea rerum pariatur dignissimos facilis est, dicta eaque iste veritatis qui repellendus sit magnam, odit, odio explicabo? Totam accusantium eius doloremque tempore quos ab accusamus? Facilis hic laudantium ut eligendi, earum quae possimus qui, molestiae quasi, voluptatem fugit quam. Illo nostrum corrupti labore exercitationem fugit, ea iste minus veniam cumque corporis fugiat ipsum aliquid ut eius. Possimus harum repellat voluptatum nostrum quisquam hic illum corporis. Iure accusantium inventore veritatis voluptas reprehenderit praesentium labore libero, placeat nisi tempora ad culpa maiores. Sapiente provident amet quibusdam excepturi ad explicabo consequatur, vero ex. Facilis vitae quasi animi aliquid ab? Inventore ipsum nostrum accusamus quos ea magni tenetur error tempore numquam veritatis, esse, nobis quia facilis cumque! Animi, placeat rem? In cumque enim beatae ipsum ipsa quaerat ullam aliquid repudiandae culpa, labore commodi delectus dolor? Nemo beatae mollitia obcaecati laborum voluptates, nesciunt vero possimus ad sequi error magnam modi delectus in a tenetur architecto molestias qui minima deserunt! Sit distinctio quo at iusto soluta dicta dolorum veniam, culpa magni molestiae laudantium eius doloremque! Aspernatur quibusdam atque modi laborum, vitae harum minima libero nulla rem, sed pariatur? Fugiat, tempora quo. A laborum reprehenderit, neque, suscipit nihil beatae cupiditate, sunt similique delectus maiores in laboriosam facere quos quam facilis iusto fugiat quod ullam placeat. Et, voluptatum dolorem nulla nisi doloremque aliquid reprehenderit quaerat quisquam autem tempore omnis voluptate rerum facere mollitia eius unde, non similique deleniti doloribus quos praesentium rem? Eveniet impedit ad quas reiciendis veritatis delectus, repellat, odit deleniti iste in molestiae maxime aut quaerat necessitatibus! Voluptate ullam sint obcaecati? Obcaecati dignissimos magnam at. Sint amet adipisci, vel, enim eos dolores aperiam reiciendis praesentium soluta maxime delectus.
+</div> */
+.newspaper {
+    column-count: 3;
+}
+
+/* The CSS multi-column layout allows easy 
+definition of multiple columns of text - just 
+like in newspapers: */
+
+
+
+
+
+
+
+
+
+
+
+/* The column-gap property specifies the gap between the columns. */
+/* html: 
+<h1>Specify the Gap Between Columns</h1>
+<div class="newspaper">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur cupiditate repudiandae sequi ab velit fugit odio quasi tempora inventore voluptatum nihil sunt pariatur ducimus cum eius maxime numquam error ullam magnam, dolorum omnis. Dolores in sunt nam eaque autem saepe soluta iure aut dignissimos reprehenderit ad deleniti quis voluptatem, voluptate omnis asperiores, natus aspernatur, sapiente veniam necessitatibus odio ratione deserunt perspiciatis. Nam tempora enim quas dolore ab quis error a eos, ad quasi. Incidunt molestiae eum maxime deleniti vitae, odit cumque quod ad inventore expedita, labore molestias similique sunt atque laborum architecto debitis unde illum voluptas, tempora nisi ipsam illo. Iste, aliquid! Consequuntur aspernatur alias quis perspiciatis veniam eius laudantium odit quod libero, ipsa harum ex ea natus dicta. Adipisci voluptas perspiciatis eveniet aliquid ex culpa sequi vero eaque voluptatem quidem pariatur reiciendis aliquam harum ipsam, magnam, vitae mollitia! Culpa aperiam atque, ipsa aut rem quasi repellat odio nulla asperiores quam minima optio doloribus eaque a? Quam, doloremque ea id ipsum excepturi accusantium omnis, quae animi delectus alias, sit quia minus! Voluptates maiores non omnis reiciendis magni, nobis earum ipsa sequi, dolores eligendi blanditiis? Omnis repudiandae mollitia itaque incidunt sapiente est consequuntur tenetur optio, magnam, fugit animi, similique consequatur aliquid ab reprehenderit! Inventore cum, quidem magni nemo maxime enim nulla tempora at suscipit deleniti quas ad aut velit pariatur nobis repellat impedit fugiat assumenda amet, iusto reiciendis molestiae? Laboriosam, obcaecati dolorum alias velit ea sunt, quae sapiente eaque earum, voluptas quos dolorem illo! Modi ullam delectus fugit blanditiis doloribus dolorem!
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The column-rule-style property specifies the 
+style of the rule between columns: */
+/* html: 
+<h1>Add a Rule Between the Columns</h1>
+<div class="newspaper">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id molestias sed sapiente, necessitatibus possimus nemo mollitia eaque. Vero, et, atque blanditiis maxime temporibus, laudantium ducimus modi officia voluptas recusandae veritatis deleniti illo. Voluptas expedita optio quae nobis fugiat dicta ipsum dignissimos earum, maxime porro delectus mollitia quis quam aspernatur neque voluptate alias repellat? Hic necessitatibus velit, ullam eveniet, totam est quasi dolorem veritatis sint vero repellendus, perferendis voluptates. Tempora eius, esse inventore porro totam earum odio, dicta voluptate eaque tenetur perferendis temporibus aperiam nulla deleniti eum enim, sed eos voluptatibus quos hic dignissimos aliquam quis? Ipsum corporis alias recusandae quos. Adipisci earum fugiat dolorum eum enim aliquid reprehenderit quaerat illum est natus ex commodi voluptatum, eos delectus mollitia, dolorem at facilis tempora praesentium. Dicta cumque soluta commodi doloremque ipsa itaque, delectus ducimus? Ipsam ex ipsum dolore suscipit, sapiente dicta veniam exercitationem rerum, impedit assumenda a? Quia totam obcaecati corrupti maxime est a eaque repellat, alias, veniam sunt fuga aspernatur distinctio earum quasi consectetur voluptatem sapiente. Veniam blanditiis accusantium pariatur, ut impedit omnis dicta sequi repellat? Tenetur ad ipsa distinctio aperiam consequatur commodi maxime, nemo unde optio fugit, nisi ducimus voluptas officia suscipit perferendis possimus. Recusandae labore culpa eligendi harum minus consequuntur rerum debitis ipsum quasi nemo quam, fuga quae molestiae fugiat libero quidem voluptatem ratione nulla illo maxime minima ullam natus. Praesentium voluptatum asperiores natus eius maxime fuga deserunt, nemo aut. Perspiciatis ab sint praesentium iure ratione? Amet quod voluptatem, inventore molestiae nostrum sunt cupiditate nulla cumque modi tempore porro!
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The column-rule-width property specifies the 
+width of the rule between columns: */
+/* <h1>Set the Rule Width</h1>
+<div class="newspaper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit expedita corporis doloremque, architecto deserunt? Illum asperiores ipsam excepturi cum exercitationem corporis eos fugiat facilis aliquam dolore, debitis voluptate eligendi doloremque illo voluptates commodi nobis ipsum velit placeat aliquid quis autem incidunt quibusdam. Totam, dignissimos nobis. Illum consequatur sequi fugit aperiam delectus, odit repellat, tempore quaerat commodi adipisci obcaecati, cumque repudiandae. Delectus, porro incidunt minima excepturi est perferendis mollitia ipsa ducimus necessitatibus architecto amet! Earum possimus ex voluptates maiores quidem provident veritatis, fugit officia cumque deleniti modi doloremque quod ipsa quo et error sunt cum asperiores optio fuga molestias. Incidunt nihil voluptate, impedit fugit officiis eveniet ea numquam repudiandae iusto voluptas ullam deserunt. Ad ex optio commodi atque id nulla, beatae delectus quos similique ullam officiis ipsam consequatur! Modi, unde fugiat, deleniti quaerat molestias eligendi recusandae blanditiis temporibus itaque sed iusto laborum facilis. Porro, repudiandae sit. Magni vitae repellat nulla esse maxime. Esse quisquam eligendi tempora. Consequuntur, nihil earum? Illum cumque rerum dolor eaque deleniti laborum incidunt in reiciendis perferendis, eum consectetur quas aperiam amet, vel repellendus fugiat quibusdam delectus culpa animi fugit! Necessitatibus, numquam. Facere dicta asperiores officiis iusto quo, doloribus nam illum. Aliquid ad doloremque ex, in quam ut velit cupiditate pariatur quas modi enim ipsum tempora earum esse animi deleniti. Similique quam delectus placeat ipsam maxime doloribus obcaecati nesciunt impedit, asperiores architecto totam sed incidunt atque! Aliquam atque facere provident maiores veniam modi nisi suscipit quasi. Officia laudantium blanditiis culpa temporibus dolorem et eum harum praesentium asperiores.
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+}
+
+
+
+
+
+
+
+
+
+/* The column-rule-color property specifies the color 
+of the rule between columns: */
+/* html: 
+<h1>Set the Rule Color</h1>
+<div class="newspaper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam nemo animi voluptas error dolor. Tenetur nihil a earum exercitationem unde accusantium cumque blanditiis repellat corporis, ullam, in voluptatibus, velit beatae assumenda ad aut eos provident asperiores eligendi minima dolor. Officia magnam fugit laborum, esse temporibus cumque corporis, minus consectetur pariatur magni explicabo? Magnam quas beatae repellat nihil. Modi in, sed mollitia ut aut quam, nihil excepturi praesentium dolor molestias aliquid! Ipsum ad aliquam magnam. Nisi necessitatibus nihil quos magni eum odio omnis mollitia molestias soluta officia fuga, harum saepe consequatur sunt corrupti, hic inventore natus quae ipsam illo dolores asperiores quidem? Molestias minus ipsam, libero eos consequatur suscipit mollitia. Iusto blanditiis deleniti officiis eum? Velit quas corporis quasi labore ullam cupiditate ad ex debitis aperiam vitae fugiat quibusdam, harum magnam tempora nisi sapiente, excepturi a aliquam cum repellat id! Autem dolorum magnam laborum incidunt consectetur exercitationem at a ipsam corrupti eveniet! Expedita ut voluptate iusto deleniti debitis molestiae laborum rem officia, veniam dicta! Debitis similique aperiam possimus magnam tempora! Ut aperiam ratione tenetur ex nisi, voluptatem soluta neque, culpa omnis dolorem tempore cumque eaque odit dolorum quo? Nisi inventore ullam, doloremque illum earum alias vero eos pariatur officiis possimus. Temporibus cum voluptatem explicabo assumenda maxime sapiente, obcaecati unde distinctio, quas eum, nobis consequuntur. Ut ea tempore, quo iste nostrum adipisci amet quasi fuga esse, voluptates et. Consectetur a quis cum voluptas, ratione quaerat iste? Quia nihil officia quas rerum maxime quos maiores, sed nemo eos. Cupiditate in cumque blanditiis!
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: dodgerblue;
+}
+
+
+
+
+
+
+
+
+
+
+/* The column-rule property is a shorthand property 
+for setting all the column-rule-* properties above. */
+/* <h1>Use the column-rule Shorthand Property</h1>
+<div class="newspaper">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora veritatis odio rem nesciunt culpa vel, officia molestias dicta harum nobis dolores, eos cupiditate aut fugiat suscipit qui. Vitae illum quaerat ipsam optio. Illo laborum, deserunt voluptatibus sint fugit sit delectus accusamus, similique quasi necessitatibus nulla veniam sed ad, ex quod architecto corrupti? Omnis, dolore? Quam magnam quod veniam atque iste, unde molestiae quis et. Doloribus aperiam laboriosam pariatur porro doloremque molestias quod deserunt. Cumque natus, eius mollitia facere porro voluptatibus blanditiis iure suscipit doloremque quod harum incidunt dolorum, deserunt praesentium ab voluptatem laudantium! Corrupti obcaecati veritatis exercitationem rerum. Beatae eligendi qui dolores ratione optio doloribus quidem dolore harum amet distinctio, odit iste nam libero commodi molestiae molestias alias illum culpa cumque! Quo iste dolore tempora sunt fugit veniam quaerat. At accusamus commodi, delectus harum voluptatum error tempore. Facere repellendus ducimus ipsam error eum laboriosam earum, labore a molestiae omnis ad excepturi enim, eveniet tempora assumenda consequatur distinctio impedit similique quaerat, placeat ut corrupti quis nobis cupiditate. At odit animi optio culpa tenetur commodi, veritatis ipsam magni quidem ex amet ad minima libero eius ea reiciendis, vitae consectetur expedita voluptatem aliquid eveniet illum? Voluptatum veniam natus aut mollitia, earum beatae quibusdam et ea voluptas distinctio totam commodi odit nemo quisquam vero sunt voluptatibus ullam modi illum numquam soluta temporibus sequi quam rem? Cumque sunt ut a eos minima labore, dolorum, minus repudiandae quis voluptatibus, autem vero adipisci iste molestias eligendi sit reiciendis ipsum! Expedita temporibus, asperiores aliquid minus blanditiis at?
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid dodgerblue;
+}
+
+
+
+
+
+
+
+
+
+/* The column-span property specifies how many 
+columns an element should span across. */
+/* html: 
+<div class="newspaper">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat alias eaque deserunt accusamus nostrum pariatur, voluptatum, repellat quia deleniti delectus obcaecati esse vel in mollitia dolorum ab velit. Quia enim molestiae ipsa consectetur voluptate voluptatibus dolor minima id earum necessitatibus voluptatem, optio odit modi quasi! Deleniti a temporibus eum illo, rerum unde ipsum officiis qui eos vel quis est animi suscipit aperiam esse maxime, ipsam quas impedit? Ullam aliquid dolore neque consequatur eius ducimus molestiae consequuntur? Atque voluptatum laboriosam fugit earum debitis ipsam. Voluptates libero culpa commodi, rerum at repellat voluptate quaerat aliquid, quos vel numquam perferendis unde doloribus, soluta architecto eum provident consequatur. Dignissimos saepe exercitationem enim beatae? Natus totam illo cum enim doloremque repellendus dolorum temporibus obcaecati ipsam vero in mollitia nesciunt dicta beatae eius, at adipisci sequi et, eveniet optio sunt facere. Tempore quibusdam, omnis beatae itaque optio molestias est architecto harum error eveniet, voluptates deserunt! Autem mollitia, ipsam aspernatur pariatur veniam laboriosam reiciendis quae neque modi praesentium aut et, debitis asperiores minima culpa cum dolorum? Eum, sed ipsam voluptatibus incidunt labore molestiae nihil beatae. Quam deleniti voluptatum labore optio pariatur consequuntur nobis possimus laborum vero rem earum ab odit illum sint nam eaque porro nulla ipsa explicabo, soluta sit saepe? Nesciunt architecto in aperiam eius nam suscipit iste voluptas rem! Sint, consequatur? Assumenda natus perferendis placeat cupiditate! Dolores aperiam, dolorum hic, iste autem ratione at molestiae modi voluptatum odio, sequi corporis eos veritatis! Incidunt quos similique magni culpa est alias voluptate reprehenderit dicta maiores placeat?
+</div> */
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid dodgerblue;
+}
+h2 {
+    column-span: all;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The column-width property specifies a suggested, 
+optimal width for the columns. */
+/* html: 
+<h1>Specify The Column Width</h1>
+<div class="newspaper">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit esse, dolorem consectetur perferendis quo, officiis debitis corporis ullam aliquam sunt eligendi maiores. Fugiat aut, eaque unde tempora suscipit vel eos iure laborum voluptate? Quae, dicta perspiciatis beatae id sit, minus officiis excepturi reprehenderit eaque, sapiente dignissimos alias. Doloribus deleniti aliquam exercitationem accusamus, fugiat eaque eveniet voluptates dolor eligendi ipsum animi ad rerum laborum laboriosam autem amet impedit porro, in architecto rem veniam obcaecati non! Doloribus deleniti repudiandae ut, veniam provident pariatur accusamus commodi natus molestias aliquid itaque rerum fuga dolore soluta voluptates ipsam in, mollitia, illum iste aspernatur velit cupiditate quia? Aperiam quae ducimus aliquid deserunt ipsa excepturi, quis saepe ipsum at sed deleniti iusto debitis natus fuga ullam perferendis porro obcaecati maxime reiciendis possimus. Exercitationem, impedit sapiente! Cupiditate voluptatibus dolores repellat. Recusandae voluptatibus hic error expedita laboriosam doloremque assumenda, pariatur alias, similique molestiae maxime cupiditate ipsum at natus dicta maiores. Natus est laboriosam, voluptatem aperiam delectus ad ea saepe iusto labore corporis repudiandae ullam, vel eligendi neque ab itaque quaerat porro rerum accusamus esse a? Id atque voluptates totam nihil pariatur rerum, nobis enim distinctio doloremque consectetur culpa error excepturi neque repudiandae adipisci mollitia eaque sit, iusto reprehenderit. Quam.
+</div> */
+.newspaper {
+    column-width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+/* The resize property specifies if (and how) an 
+element should be resizable by the user. */
+/* html: 
+<h1>The resize Property</h1>
+<div>
+    <p>Let the user resize only the width 
+       of this div element. 
+    </p>
+    <p>
+        To resize: Click and drag the bottom right 
+        corener of this div element.
+    </p>
+</div> */
+div {
+    border: 2px solid;
+    padding: 20px;
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* The following example lets the user resize only 
+the height of a <div> element: */
+/* html: 
+<h1>The resize Property</h1>
+<div>
+    <p>Let the user resize only the height of this div element.</p>
+    <p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div> */
+div {
+    border: 2px solid;
+    padding: 20px;
+    width: 300px;
+    resize: vertical;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* The following example lets the user resize both the height
+ and width of a <div> element: */
+/* html: 
+<h1>The resize property</h1>
+<div>
+    <p>Let the user resize both the height and the width of this div element</p>
+    <p>To resize: Click and drag the bottom right corner of this div element</p>
+</div> */
+div {
+    border: 2px solid;
+    padding: 20px;
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* In many browsers, <textarea> is resizable by default. 
+Here, we have used the resize property to disable the resizability: */
+/* html: 
+<h1>The resize Property</h1>
+<p>
+    In many browsers, textarea are resizable by default.
+    In this example, we have used the resize property to 
+    disable the resizability:
+</p>
+<textarea name="test" id="test" cols="30" rows="10">
+    Textarea - Not resizable
+</textarea>
+<textarea>
+    Textarea - Resizable (default)
+</textarea> */
+textarea#test {
+    resize: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS OUTLINE OFFSET */
+
+/* The outline-offset property adds space between an 
+outline and the edge or border of an element.*/
+/* Note: Outline differs from borders! Unlike 
+border, the outline is drawn outside the element's 
+border, and may overlap other content. Also, 
+the outline is NOT a part of the element's dimensions;
+ the element's total width and height is not affected 
+ by the width of the outline. */
+ /* The following example uses the outline-offset property to add space
+  between the border and the outline: */
+
+/* html:  
+<h1>The outline-offset property</h1>
+<div class="ex1">
+    This div has a 4 pixels solid red outline 
+    15px pixels outside the border edge.
+</div>
+<div class="ex2">
+    This div has a 5 pixels dashed blue outline 
+    5 pixels outside the border edge.
+</div> */
+div.ex1 {
+    margin: 20px;
+    border: 1px solid black;
+    outline: 4px solid red;
+    outline-offset: 15px;
+}
+div.ex2 {
+    margin: 10px;
+    border: 1px solid black;
+    outline: 5px dashed blue;
+    outline-offset: 5px;
+}

@@ -1,0 +1,19 @@
+/* To create a variable with global scope, 
+declare it inside the :root selector. 
+The :root selector matches the document's root element. */
+
+/* html: 
+<h1>Variables</h1> */
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --border: 1px solid black;
+}
+body {
+    background-color: var(--blue);
+}
+h1 {
+    color: var(--white);
+    border: var(--border);
+}

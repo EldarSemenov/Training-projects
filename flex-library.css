@@ -1,0 +1,735 @@
+/* html: 
+<h1>Create a Flex Container</h1>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<p>A flexible Layout must have a parent element 
+   with the <em>display</em> property set to <em>flex</em>. 
+</p>
+<p>Direct child elements of the flexible container 
+   automatically becomes flexible items. 
+</p> */
+.flex-container {
+    display: flex;
+    background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1; 
+   margin: 10px;
+   padding: 20px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* flex container properties:  */
+
+/* flex-direction */
+/* flex-wrap */
+/* flex-flow */
+/* justify-content */
+/* align-items */
+/* align-content */
+
+
+
+
+
+
+
+
+
+
+/* html : 
+<h1>The flex-direction Property</h1>
+<p>The "flex-direction: column;" stacks the flex 
+   items vertically (from top to bottom): 
+</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div> */
+.flex-container {
+   display: flex;
+   flex-direction: column;
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-direction Property</h1>
+<p>The flex-direction: column-reverse; stacks 
+    the flex items vertically (but from bottom to top):
+</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div> */
+.flex-container {
+   display: flex;
+   flex-direction: column-reverse;
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-direction Property</h1>    
+<p>The flex-direction: row; stacks the flex 
+   items horizontally (from left to right); 
+</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div> */
+.flex-container {
+   display: flex;
+   flex-direction: row;
+   /* or flex-direction: row-reverse; */
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-wrap Property</h1>
+<p>The "flex-wrap: wrap;" specifies that the 
+flex items will wrap if necessary:</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div> */
+.flex-container {
+   display: flex;
+   flex-wrap: wrap;
+   /* try no wrap and resize the browser */
+   /* then try flex-wrap: wrap-reverse; & resize the screen */
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html : 
+<h1>The flex-flow Property</h1>
+<p>The flex-flow property is a shorthand property 
+    for the flex-direction and the flex-wrap properties.</p>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div>   */
+.flex-container {
+   display: flex;
+   flex-flow: row wrap;
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The justify-content Property</h1>
+<p>The "justify-content: center;" aligns the flex 
+    items at the center of the container:</p>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>  */
+.flex-container {
+   display: flex;
+   justify-content: center;
+   /* then try: justify-content: flex-start; */
+   /* then try: justify-content: flex-end; */
+   /* then try: justify-content: space-around; */
+   /* then try: justify-content: space-between; */
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-items Property</h1>  
+<p>The "align-items: center;" aligns the flex 
+    items in the middle of the container:</p>
+
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>   */
+.flex-container {
+   display: flex;
+   height: 200px;
+   align-items: center;
+   /* align-items: flex-start */
+   /* align-items: flex-end */
+   /* align-items: stretch */
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-items Property</h1>  
+<p>The "align-items: baseline;" aligns the flex items 
+    such as their baselines aligns:</p>
+<p>Note: the example uses different font-size to demonstrate 
+    that the items gets aligned by the text baseline:</p> 
+
+<div class="flex-container">
+    <div><h1>1</h1></div>
+    <div><h6>2</h6></div>
+    <div><h3>3</h3></div>
+    <div><small>4</small></div>
+</div>    */
+.flex-container {
+   display: flex;
+   height: 200px;
+   align-items: baseline;
+   background: dodgerblue;
+}
+.flex-container > div {
+    background: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-content Property</h1>
+<p>The "align-content: space-between;" displays the 
+flex lines with equal space between them:</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+</div> */
+.flex-container {
+   display: flex;
+   height: 600px;
+   flex-wrap: wrap;
+   align-content: space-between;
+   /* then do: align-content: space-around; & resize */
+   /* align-content: stretch; */
+   /* align-content: center; */
+   /* align-content: flex-start */
+   /* align-content: flex-end */
+   overflow: scroll;
+   background-color: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>Perfect Centering</h1>
+<p>A flex container with both the justify-content & 
+   the align-items peoperties set to center will align 
+   the item(s) in the center (in both axis).</p>
+<div class="flex-container">
+    <div></div>
+</div>    */
+.flex-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 300px;
+   background: dodgerblue;
+}
+.flex-container > div {
+   background: #f1f1f1;
+   color: white;
+   width: 100px;
+   height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html:
+<h1>Flexible Items</h1>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+<p>All direct children of a flexible container 
+   becomes flexible items.  
+</p> */
+.flex-container {
+   display: flex;
+   background-color: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The order Property</h1>
+<p>The order property specifies the order of the flex items.</p>
+<p>The first flex item in the code does not have to appear 
+    as the first item in the layout.</p>
+<p>The order value must be a number, default value is 0.</p>
+<p>Use the order property to sort the flex items as you like:</p>
+
+<div class="flex-container">
+    <div style="order: 3;">1</div>
+    <div style="order: 2;">2</div>
+    <div style="order: 4;">3</div>
+    <div style="order: 1;">4</div>
+</div> */
+.flex-container {
+   display: flex;
+   align-items: stretch;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-grow Property</h1>
+<p>The flex-grow property specifies how much a flex item 
+will grow relative to the rest of the flex items. The value 
+must be a number, default value is 0.</p>
+<p>Make the third item grow eight times faster than the 
+other flex items: </p>
+<div class="flex-container">
+    <div style="flex-grow: 1;">1</div>
+    <div style="flex-grow: 1;">2</div>
+    <div style="flex-grow: 8;">3</div>
+</div> */
+.flex-container {
+   display: flex;
+   align-items: stretch;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-shrink Property</h1>
+<p>The flex-shrink property specifies how much a flex 
+item will shrink relative to the rest of the flex items. 
+The value must be a number, default value is 1.</p>
+<p>Don't let the third flex item shrink as much 
+as the other items:</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex-shrink: 0;">3</div> <!--Resize the browser-->
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+</div> */
+.flex-container {
+   display: flex;
+   align-items: stretch;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex-basis Property</h1>
+<p>The flex-basis property specifies the initial length of a flex item.</p>
+<p>Set the initial length of the third flex item to 200px:</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex-basis: 200px;">3</div>
+    <div>4</div>
+</div> */
+.flex-container {
+   display: flex;
+   align-items: stretch;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The flex Property</h1>
+<p>The flex property is a shorthand property for the flex-grow, 
+flex-shrink, and flex-basis properties</p>
+<p>Make the third flex item not growable (0), 
+not shrinkable (0), & with an initial length of 200px:</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex: 0 0 200px;">3</div>
+    <div>4</div>
+</div> */
+.flex-container {
+   display: flex;
+   align-items: stretch;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-self Property</h1>
+<p>The align-self property specifies the alignment for 
+the selected item inside the flexible container. The align-self
+property overrides the default alignment set by the container's 
+align-items property. In these examples we use a 200 pixels high 
+container, to better demonstrate the align-self property:</p>
+<p>The "align-self: center;" aligns the selected flex item 
+in the middle of the container:</p>
+<p>The align-self property overrides the align-items 
+property of the container.</p>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div style="align-self: center;">3</div>
+    <div>4</div>
+</div> */
+.flex-container {
+   display: flex;
+   height: 200px;
+   background: #f1f1f1;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-self Property</h1>
+<p>The "align-self: flex-start;" aligns the selected flex 
+item at the top of the container.</p>
+<p>The "align-self: flex-end;" aligns the selected flex 
+item at the bottom of the container.</p>
+<div class="flex-container">
+    <div>1</div>
+    <div style="align-self: flex-start;">2</div>
+    <div style="align-self: flex-end;">3</div>
+    <div>4</div>
+</div> */
+.flex-container {
+   display: flex;
+   height: 200px;
+   background: #413d3d;
+}
+.flex-container > div {
+   background: dodgerblue;
+   color: white;
+   width: 100px;
+   margin: 10px;
+   text-align: center;
+   line-height: 75px;
+   font-size: 30px;
+}
+
+
+
+
+/* MAKE PROJECTS FROM THE 
+CHAPTER W3SCHOOL FLEX RESPONSIVE WHEN YOU GET BETTER */

@@ -1,0 +1,3731 @@
+/* GRID CONTAINER */
+
+/* To make an HTML element behave as a grid container, 
+you have to set the display property to grid or inline-grid. */
+
+/* Grid containers consist of grid items, placed inside columns and rows. */
+
+
+/* The grid-template-columns Property */
+/* The grid-template-columns property defines the number of 
+columns in your grid layout, and it can define the width of each column.
+The value is a space-separated-list, where each value defines 
+the width of the respective column. If you want your grid layout to 
+contain 4 columns, specify the width of the 4 columns, or "auto" 
+if all columns should have the same width. */
+
+/* html: 
+<h1>The grid-tempalte-columns Property</h1>
+<p>You can use the grid-template-columns property 
+to specify the number of columns in the grid layout.</p>
+<div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* then try: 
+    grid-template-columns: 80px 200px auto 30px */
+    /* The grid-template-columns property can also 
+    be used to specify the size (width) of the columns. */
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+/* Note: If you have more than 4 items in a 4 
+columns grid, the grid will automatically add 
+a new row to put the items in. */
+
+
+
+
+
+
+
+/* html: 
+<h1>The grid-tempalte-rows Property</h1>
+<p>Use the grid-tempalte-rows property to 
+specify the size (height) of each row.</p>
+<div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 200px;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+/* html : 
+<h1>The justify-content Property</h1>
+<p>Use the justify-content property to align 
+the whole grid inside the container. The value "space-evenly" 
+will give the columns equal amount of space between, & around them:</p>
+<p>Note: The grid's total width has to be less than the 
+container's width for the justify-content property to have any effect.</p>
+<div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div> */
+.grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    /* justify-content: space-around */
+    /* justify-content: space-between */
+    /* justify-content: center */
+    /* justify-content: start */
+    /* justify-content: end */
+    grid-template-columns: 50px 50px 50px;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+/* html: 
+<h1>The align-content Property</h1>
+<p>Use the align-content property to vertically align 
+the grid inside the container.</p>
+<p>Note: The grid's total height has to be less than the
+container's height for the align-content property to have any effect.</p>
+<div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div> */
+.grid-container {
+    display: grid;
+    height: 400px;
+    align-content: center;
+    /* align-content: space-evenly; */
+    /* align-content: space-ariund; */
+    /* align-content: space-between; */
+    /* align-content: start; */
+    /* align-content: end; */
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+
+
+
+/* CHILD ELEMENTS (items) */
+
+/* A grid container contains grid items. By default, a 
+container has one grid item for each column, in each row,
+but you can style the grid items so that they will span
+multiple columns and/or rows. */
+
+/* html: 
+<h1>The grid-column Property</h1>
+<p>The grid-column property defines on which column(s) to place an item.</p>
+<p>You define where the item will start, and where the item will end.</p>
+<p>Use the grid-column property to specify where 
+to place an item. Item1 will start on column 1 & end 
+before column 5.</p>
+<p>Note: The grid-column property is a shorthand property for the 
+grid-column-start and the grid-column-end properties</p>
+<p>To place an item, you can refer to line numbers, or use the 
+keyword "span" to define how many columns the item will span.</p>
+
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+    <div class="item14">14</div>
+    <div class="item15">15</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.item1 {
+   grid-column: 1 / 5;
+}
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The grid-column Property</h1>
+<p>Item1 will start on column-line 1 & span 3 columns:</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+    <div class="item14">14</div>
+    <div class="item15">15</div>
+    <div class="item16">16</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.item1 {
+    grid-column: 1 / span 3;
+    /* try: */
+    /* grid-column: 2 / span 3; */
+}
+
+
+
+
+
+/* html: 
+<h1>The grid-row Property</h1>
+<p>Use the grid-row property to specify where to place an item.</p>
+<p>Item1 will start on row-line 1 & end on row-line 4:</p>
+<p>Note: The grid-row property is a shorthand property for the 
+grid-row-start and the grid-row-end properties</p>
+<p>To place an item, you can refer to line numbers, or use the
+keyword "span" to define how many rows the item will span</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+    <div class="item14">14</div>
+    <div class="item15">15</div>
+    <div class="item16">16</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.item1 {
+    grid-row: 1 / 4;
+    /* grid-row: 1 / span 2 */
+}
+
+
+
+
+
+
+
+
+/* The GRID-AREA property */
+/* The grid-area property can be used as a shorthand property for 
+the grid-row-start, grid-column-start, grid-row-end and the 
+grid-column-end properties. */
+
+/* html: 
+<h1>The grid-area Property</h1>
+<p>You can use the grid-area property to specify where to place an item</p>
+<p>The syntax is:</p>
+<p>grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+<p>Item8 will start on row-line 1 & column-line 2, & end on row-line 5 column-line 6:</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+    <div class="item14">14</div>
+    <div class="item15">15</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.item8 {
+    grid-area: 1 / 2 / 5 / 6;
+}
+
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The grid-area property</h1>
+<p>You can use the grid-area property to specify where to place an items.</p>
+<p>The syntax is grid-row-start / grid-column-start / grid-row-end / grid-column-end.</p>
+<p>Item8 will start on row-line 2 & column-line 1, & span 2 rows & 3 solumns:</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 30px;
+}
+.item8 {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+
+
+
+
+
+
+
+/* NAMING GRID ITEMS */
+/* The grid-area property can also be used to assign names to grid items. */
+
+/* html : 
+<h1>The grid-area Property</h1>
+<p>You can use the grid-area property to name grid items.</p>
+<p>You can reffer to the name when you set up the grid layout, 
+by using the grid-template-areas property on the grid container.</p>
+<p>Item1, is called "myArea" and will take up the place of all 5 columns</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+</div> */
+.item1 {
+    grid-area: myArea;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: "myArea myArea myArea myArea myArea";
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+/* Note: A period sign represents a grid item with no name. */
+
+
+
+
+
+
+
+
+/* html: 
+<h1>The grid-area Property</h1>
+<p>You can use the grid-area peoperty to name grid items.</p>
+<p>You can refer to the name when you set up the grid layout, 
+by using the grid-template-areas proprty on the grid container.</p>
+<p>Item1, is called "myArea" & will take up the place of 2 columns (out of 5)</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+</div> */
+.item1 {
+    grid-area: myArea;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: "myArea myArea . . .";
+    /* be careful with these dots, do exactly the same */
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* To define two rows, define the column of the second row inside another set of apostrophes: */
+
+/* html: 
+<h1>The grid-area Property</h1>
+<p>You can refer to the name when you set up the grid layout, 
+by using the grid-template-areas property on the grid container.</p>
+<p>Item1, is called "myArea" and will take up the place of 2 columns (out of 5), 
+& will span 2 rows:</p>
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+</div> */
+.item1 {
+    grid-area: myArea;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: "myArea myArea . . . " "myArea myArea . . .";
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+ 
+
+
+
+
+
+
+
+/* html: 
+<h1>The grid-area Property</h1>
+<p>You can use the grid-area property to name grid items.</p>
+<p>You can refer to the name when you set up the grid layout, 
+by using the grid-template-areas property on the grid container.
+This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+</div> */
+.item1 {grid-area: header;}
+.item2 {grid-area: menu;}
+.item3 {grid-area: main;}
+.item4 {grid-area: right;}
+.item5 {grid-area: footer;}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+/* html: 
+<h1>Sort the Items</h1>
+<p>The grid items do not have to be displayed in the same 
+order as they are written in the HTML code.</p>
+<p>The Grid Layout allows us to position the items anywhere we like.</p>
+<p>The first item in the HTML code does not have to appear 
+as the first item in the grid.</p>
+
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+.item1 {grid-area: 1 / 3 / 2 / 4;}
+.item2 {grid-area: 2 / 3 / 3 / 4;}
+.item3 {grid-area: 1 / 1 / 2 / 2;}
+.item4 {grid-area: 1 / 2 / 2 / 3;}
+.item5 {grid-area: 2 / 1 / 3 / 2;}
+.item6 {grid-area: 2 / 2 / 3 / 3;}
+/* 
+for example: for item1 the scheme is next:
+
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+
+just press "inspect" and see the position of each item    
+*/
+
+
+
+
+
+
+
+
+/* html: 
+<h1>Re-arange the Order on Small Devices</h1>
+<p>Resize the window to 500px see the effect.</p>
+
+<div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+</div> */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background: dodgerblue;
+    padding: 10px;
+}
+.grid-container > div {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+@media only screen and (max-width: 500px) {
+    .item1 {grid-area: 1 / span 3 / 2 / 4;}
+    .item2 {grid-area: 3 / 3 / 4 / 4;}
+    .item3 {grid-area: 2 / 1 / 3 / 2;}
+    .item4 {grid-area: 2 / 2 / span 2 / 3;}
+    .item5 {grid-area: 3 / 1 / 4 / 2;}
+    .item6 {grid-area: 2 / 3 / 3 / 4;}
+}
+/* remember that Flexbox was one-directional. 
+It only deals with either rows or columns, but not both. */
+
+/* Read this: https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/ */
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div></div>
+    <div></div>
+    <div></div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 100px 50px;
+    height: 50px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* using fr unit */
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Of course, if the size of the grid container changes 
+(for example, the user resizes the window), the 1fr would adjust accordingly! */
+
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* 100px 1fr 1fr can be understood as: 100px, and the 
+remaining space is divided into two equal parts. */
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid rgba(0 0 0 / 20%);
+}
+/* n the example above, we defined the column tracks with 1fr 2fr. 
+You can read this as: the second track is twice as 
+large as the first (2fr is twice the size of 1fr). */
+
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div><img class="cat-img" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* to fix this, see below */
+
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div><img class="cat-img" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.cat-image {
+    max-width: 100%;
+    height: auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 1fr 20vw;
+    gap: 20px;
+}
+.grid > * {
+    outline: 1px solid dodgerblue;
+}
+
+
+
+
+
+
+
+
+/* html: 
+<main>
+    <div class="container">
+        <h1>Ideas</h1>
+        <div class="ideas-grid">
+
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-details">
+                    <h2>Plan your vacation</h2>
+                    <p>Why not take some time off and go on vacation?
+                       Use our unique tools to plan your next vacation!
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-details">
+                    <h2>Go for a hike</h2>
+                    <p>Why not take some time off and go for a hike 
+                       in your nearest nature reserve?
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-details">
+                    <h2>Walk your cat</h2>
+                    <p>Don't forget to walk your cat. Cats love to 
+                    experience the outdoore (if they are used to it).
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main> */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.ideas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    border: 1px solid #C4CFDC;
+    border-radius: 4px;
+    background-color: white;
+}
+.card-image {
+    background-image: url("https://res.cloudinary.com/dbfn5lnvx/image/upload/v1646915250/learnhtmlcss/images/travel-small.jpg");
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 100px;
+}
+.card-details {
+    padding: 15px;
+    flex: 1;
+}
+.card-details h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+.card-details p {
+    color: #485467;
+    line-height: 1.3;
+}
+
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 100px;
+    grid-template-rows: 40px 80px;
+    gap: 5px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* If the grid container has a fixed height, for example,
+height: 500px or height: 100vh, then the fr unit works as you'd expect. */
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    height: 300px; /* fixed height */
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* When the height is not specified, it'll be auto by default */
+/* Let's take the previous example and remove the height declaration */
+/* Since the height of the grid is auto, the 1fr here did not expand 
+since there's no more available space – the grid only grows with its content. */
+
+
+
+
+
+
+
+/* html: 
+<main>
+        <div class="grid-layout">
+            <div>header (start)</div>
+            <div>header (middle)</div>
+            <div>header (end)</div>
+            <div class="sidebar"><p>Sidebar here...</p></div>
+
+            <div class="empty-state">
+                <div>
+                    <img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1654594870/learnhtmlcss/images/cart.svg" width="45" height="45" alt="">
+                    <h1 class="empty-state-title">Shopping cart empty</h1>
+                    <p class="empty-state-description">Get started by browsing our recomended products.</p>
+                </div>
+            </div>
+
+            <div class="ads">
+                <p>Ads here...</p>
+            </div>
+            
+        </div>
+    </main> */
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: system-ui;
+        margin: 0;
+    }
+    .ads {
+        background: #A7ADBA;
+        padding-inline: 10px;
+    }
+    .grid-layout {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100px 1fr 150px;
+        grid-template-rows: 100px 1fr;
+    }
+    .empty-state {
+        color: #05445E;
+        background: #D4F1F4;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .empty-state-title {
+        font-size: 16px;
+    }
+    .empty-state-description {
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+    /* html: 
+    <main class="container">
+    <h1>Calendar</h1>
+    <div class="calendar">
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+    </div>
+</main> */
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.calendar {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* you can write: 
+    grid-tempalte-columns: repeat(7, 1fr) */
+    /* The syntax for the repeat() function is the following:
+repeat(N, tracks) where N is the number of repetitions, 
+and tracks is the repeated pattern. */
+/* grid-template-rows: repeat(4, 100px); */
+/* is equivalent to: */
+/* grid-template-rows: 100px 100px 100px 100px; */
+    grid-template-rows: 90px 90px;
+    margin-bottom: 10px;
+}
+.day {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* REORDERING GRID CELLS */
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div style="order: -2;">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* html: 
+<h1>Responsive grid</h1>
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+.grid > * {
+    outline: 1px dashed black;
+}
+@media (max-width: 37.5rem) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/* html: 
+<main>
+    <div class="grid-layout">
+        <div class="sidebar"><p>Sidebar here...</p></div>
+
+        <div class="empty-state grid-layout--middle">
+            <div>
+                <img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1654594870/learnhtmlcss/images/cart.svg" width="45" height="45" alt="">
+                <h1 class="empty-state-title">Shopping cart empty</h1>
+                <p class="empty-state-description">Get started by browsing our recomended products</p>
+            </div>
+        </div>
+
+        <div class="ads">
+            <p>Ads here...</p>
+        </div>
+    </div>
+</main> */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui;
+    margin: 0;
+}
+.sidebar, 
+.ads {
+    background-color: #A7ADBA;
+    padding-inline: 10px;
+}
+.grid-layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+}
+@media (max-width: 37.5rem) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .grid-layout--middle {
+        order: -1;
+    }
+}
+.empty-state {
+    color: #05445E;
+    background-color: #D4F1F4;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.empty-state-title {
+    font-size: 16px;
+}
+.empty-state-description {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* We can now use the grid-area property on grid items 
+to place an item in the specific named area we created.
+ For example, here's how we place the second grid item 
+ into the sidebar named area: */
+ /* html: 
+ <div class="grid">
+    <div class="first">First item</div>
+    <div class="second">Second item</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: "sidebar main";
+}
+.first {
+    grid-area: main;
+}
+.second {
+    grid-area: sidebar;
+}
+.grid > * {
+    outline: 1px dashed black;
+}
+/* Did you notice how grid-area: sidebar on .second 
+placed that grid item in the first named area we created 
+with grid-template-areas? Similarly, grid-area: main on 
+.first placed that grid item on the second named area that 
+we created with grid-template-areas. */
+
+/* Rewriting areas with media queries
+The grid-template-areas can be rewritten using media queries. 
+This would allow you to reorder grid items based on the
+ new layout with just one line of CSS! */
+
+ /* @media (max-width: 37.5rem) {
+    .grid {
+        grid-template-areas: "main sidebar";  it was "sidebar main "
+    }
+}
+ */
+
+
+
+
+
+
+
+
+ /*html: 
+ <h1>Define areas</h1>
+<div class="grid">
+    <div>A</div>
+    <div class="item-special">B</div>
+    <div>C</div>
+</div>  */
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-areas: "side main overview";
+}
+.item-special {
+    grid-area: overview;
+}
+
+
+
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>Sidebar</div>
+    <div>Main content</div>
+    <div>Social links</div>
+    <div>Copyright</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 100px;
+    grid-template-areas: "sidebar main"
+                         "social copyright";
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px dashed black;
+}
+
+
+
+
+
+
+
+/* CELLS WITHOUT A NAME */
+/* html: 
+<div class="grid">
+    <div>Sidebar</div>
+    <div>Main content</div>
+    <div>Social links</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px 100px;
+    grid-template-areas: "sidebar main"
+    "social .";
+}
+.grid > * {
+    outline: 1px dashed black;
+}
+/* Grid cells without grid-area would still fill 
+the place created by this grid cell. The example 
+above had three grid items. However, if we provide 
+four grid items, then they will fill the four grid
+cells (including the one without a name): */
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "side main"
+    ".... copyright";
+}
+.grid > * {
+    outline: 1px solid gray;
+}
+
+
+
+
+
+/* html: 
+<h1>Create layout</h1>
+<div class="grid">
+    <div>Ads</div>
+    <div>Main</div>
+    <div>Social links</div>
+    <div>Copyright</div>
+</div> */
+.grid > * {
+    outline: 0.5px dashed lightgray;
+    border-radius: 7px;
+    text-align: center;
+}
+.grid {
+    margin-left: 20px;
+    max-width: 600px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px 30px;
+    grid-template-areas: 
+    "ads main" /* or: ". main"*/
+    "social-links copyright";
+}
+
+
+
+
+
+
+/* html: 
+<div class="grid"></div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "side main main"
+    "side main main";
+    height: 200px;
+    outline: 1px solid black;
+}
+/* inspect dev-tools and see */
+
+
+
+
+
+
+/* html: 
+<div class="grid">
+    <div class="item-1">Side</div>
+    <div class="item-2">Main</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "side main main"
+    "side main main";
+    height: 200px;
+    outline: 1px solid black;
+}
+.item-1 {
+    grid-area: side;
+}
+.item-2 {
+    grid-area: main;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Notice how these two grid items have expanded and 
+filled their respective grid areas. Previously, 
+each grid item would take up one grid cell.
+ However, since we've defined areas that expand 
+ more than one cell, we can place items inside of them! */
+
+
+
+
+
+
+/* html: 
+<h1>Visualize areas</h1>
+<div class="grid">
+    <div class="sidebar">
+        <p>Sidebar content here</p>
+    </div>
+    <div class="main-content">
+        <p>Main content here</p>
+    </div>
+</div> */
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "side main main"
+    "side main main";
+}
+.grid > * {
+    outline: 1px solid black;
+}
+.sidebar {
+    grid-area: side;
+}
+.main-content {
+    grid-area: main;
+}
+@media (max-width: 35rem) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "main"
+        "side";
+    }
+}
+
+
+
+
+
+/* auto vs fr */
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum voluptate vitae porro vel eligendi non ratione 
+        laborum quibusdam unde, ad laboriosam voluptas? Quis 
+        srecusandae ducimus placeat sint qui, delectus vel.
+    </div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* The auto keyword will try to fit as much content as possible, */
+
+
+
+
+
+
+
+/* Also, if you use the auto keyword with a fixed 
+value such as px, then auto will behave similarly to fr */
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 50px auto;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* auto combined with fr
+When auto and fr are used in the same declaration, 
+the value of auto is calculated before fr.
+This is because fr is used to distribute the remaining 
+space. So, think about it as fr is distributing the 
+remaining space after calculating all the other values (including auto).
+This can be very useful as it lets you create flexible layouts
+ where the column's size depends on the content and where the 
+ remaining space is still distributed. For example: */
+
+ /* html: 
+ <div class="grid">
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>B</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* This is an alternative to using Flexbox, where we had to
+ use the flex shorthand property to make one flex item 
+ expand and fill all the remaining space: */
+ /* html: 
+ <div class="flex">
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div class="expand">B</div>
+</div> */
+.flex {
+    display: flex;
+    gap: 10px;
+}
+.expand {
+    flex: 1;
+}
+.flex > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* html: 
+<main>
+    <div class="container">
+        <h1>Notifications</h1>
+
+        <ol class="notifications">
+            <li class="notification">
+                <p class="notification-text">The cat has liked your comment</p>
+                <img class="avatar" width="35" height="35" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" alt="">
+            </li>
+            <li class="notification">
+                <p class="notification-text">The cat has poked you. Would you like to poke back?</p>
+                <img class="avatar" width="35" height="35" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" alt="">
+            </li>
+        </ol>
+    </div>
+</main> */
+.avatar {
+    border-radius: 50%;
+}
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.notifications {
+    padding-left: 0;
+    background-color: rgba(161 161 161 / 10%);
+    border-radius: 4px;
+}
+.notification {
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ececec;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.notification:last-child {
+    border-bottom: 0;
+}
+.notification-text {
+    font-size: 14px;
+    margin: 0;
+    color: #444;
+}
+
+
+
+
+
+
+/* html: 
+<div class="layout-bottom-footer">
+    <header><h1>Page title</h1></header>
+    <main>
+        <p>Content here</p>
+    </main>
+    <footer><p>Page footer</p></footer>
+</div> */
+header,
+footer {
+    background: lightgray;
+}
+.layout-bottom-footer {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+
+
+
+/* THE minmax() FUNCTION */
+
+/* html: 
+<div class="gird">
+    <div>A</div>
+    <div>B</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(50px, auto) 1fr;
+    gap: 10px;
+}
+/* The minmax(50px, auto) defines a minimum size of 50px 
+and a maximum of auto, which is the size of the content. */
+/* Notice what happens when we keep the same CSS and 
+add more content into the first grid cell (instead of A write more content) */
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* You can also use minmax(100px, 1fr), which defines 
+a minimum of 100px and a maximum of 1fr, equivalent 
+to an equal fraction of the remaining space. As a 
+reminder, the remaining space is calculated last. */
+
+/* html: 
+<div class="grid">
+    <div>A longer text (track adapts)</div>
+    <div>B</div>
+</div>  */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* Usage with repeat() */
+
+/* html: 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+</div>  */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(25px, 1fr));
+    gap: 5px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* Resize the browser preview tab to see how minmax(100px, 300px) 
+is 100px at a minimum and 300px at a maximum */
+/* html 
+<div class="grid">
+    <div>First cell</div>
+    <div>Second cell</div>
+</div>   */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(100px, 300px) 1fr;
+    gap: 20px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* Resize the browser preview tab to see how 
+minmax(100px, auto) is always 100px for the first
+grid cell because the text's width is less than 100px */
+/* html 
+<div class="grid">
+    <div>First cell</div>
+    <div>Second cell with much larger text!</div>
+    <div>Third cell</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(100px, auto) minmax(100px, auto) 1fr;
+    gap: 20px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* html 
+<div class="grid">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(25px, 1fr));
+    gap: 20px;
+}
+.grid > * {
+    outline: 1px solid black;
+    min-height: 50px;
+}
+
+
+
+
+
+/* html 
+<div class="grid">
+    <div><img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Even though we specified grid-template-columns: 
+1fr 1fr, we did not end up with equal columns in this example. */
+/* This is because the first grid item contains an image 
+with a fixed width of 400px. This will happen because, at a minimum, 
+1fr is set to auto by the browser, meaning that it will take the 
+element's width. At a maximum, it will take up one fraction of the limited space. */
+/* We generally recommend setting a max-width to 100% on the content of 
+the grid item. For images, don't forget to set the height 
+to auto to avoid distorting the image. */
+
+/* html 
+<div class="grid">
+    <div><img class="cat-img" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.cat-img {
+    max-width: 100%;
+    height: auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Sometimes that's not possible. For example, 
+if you're unsure what content you will have or 
+if the content is created by a plugin you're 
+using. In that case, you can solve it using 
+the % unit, as the percentage values will always be respected. */
+.challenge-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+/* The code above creates two-equally sized
+ columns no matter what content is in their 
+ children. This prevents the grid from ever blowing out. */
+
+
+
+
+
+
+/*Another way to solve this would be to use minmax(0, 1fr). 
+This prevents the grid from blowing out because you're 
+setting the minimum value to 0 (instead of auto) and 
+the maximum value to 1fr:  */
+
+/* html 
+<div class="grid">
+    <div><img class="cat-img" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* As you can see, the grid does not blow out anymore. 
+However, since the image still has a width of 400px, 
+it will overflow into the second grid item. You can 
+disable overflowing if you wish: */
+
+/* html
+<div class="grid">
+    <div class="cell"><img class="cat-img" src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt=""></div>
+    <div>B</div>
+</div> */
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.grid > * {
+    outline: 1px solid black;
+}
+.cell {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* html
+ <main>
+        <h1>Grid</h1>
+        <div class="grid">
+            <div>
+                <p>First cell</p>
+            </div>
+            <div>
+                <img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" width="400" height="400" alt="Cat on a snowy day" class="cat-img">
+            </div>
+            <div>
+                <p>Third cell</p>
+            </div>
+        </div>
+    </main> */
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: system-ui;
+        margin: 0;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .cat-img {
+       max-width: 100%;
+       height: auto;
+    }
+    
+    .grid > * {
+        outline: 1px solid black;   
+    }
+    
+    
+
+
+
+/* DYNAMIC REPEAT WITH AUTO-FIT */
+
+/* Fit as many 150px columns as possible */
+/* HTML 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    outline: 1px solid red;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* The repeat(auto-fit, 150px) instructs the browser 
+to fit as many 150px tracks as possible. Those that 
+don't fit will wrap onto a new row. */
+
+/* When the area shrinks or grows, the number of columns
+ adjusts automatically without media queries!
+This is the power of the auto-fit keyword */
+
+
+
+
+
+
+/* Fit as many 100px and 50px columns as possible */
+/* html 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px 50px);
+    outline: 1px solid red;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* Combining with minmax() */
+
+/* The true power of auto-fit shines when combined with minmax(). 
+You will see in the following visualization challenges that while 
+repeat(auto-fit, 150px) works, there are some viewport sizes 
+where you will end up with anywhere from 1 to 149px of free space.
+This is visible by looking at the red outline. It would be great 
+if we could distribute this free space to the tracks using fr. 
+For that, we changed the fixed track size from 150px to 
+minmax(150px, 1fr). So, 150px at a minimum, and divide the 
+remaining space at a maximum.
+The result is: */
+
+/* Responsively fit as many 150px columns as possible */
+/* html 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    outline: 1px solid red;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* auto-fit definition. 
+auto-fit fits as many columns as 
+possible based on the track size(s) 
+you provide. Those that don't fit 
+will wrap onto a new row. */
+
+
+
+
+
+
+/* html 
+<h1>Visualize auto-fit</h1>
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>
+    <div>J</div>
+    <div>K</div>
+    <div>L</div>
+    <div>M</div>
+</div> */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.grid {
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* html
+<h1>Visualize auto-fit</h1>
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>
+    <div>J</div>
+    <div>K</div>
+    <div>L</div>
+    <div>M</div>
+</div> */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.grid {
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50px 100px);
+    /* then try: */
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    /* then: */
+    /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) minmax(100px, 1fr)); */
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* html
+<h1>Visualize auto-fit</h1>
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+</div>*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.grid {
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+
+/* AUTO-FIT VS AUTO-FILL */
+/* HTML 
+<div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    outline: 1px solid red;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Nothing seems different on your current screen size. 
+However, notice what happens when we have only one grid item */
+
+
+
+
+
+
+
+/* Do you notice the difference with auto-fit now? 
+If you remember from the previous challenge, 
+when we used auto-fit, the grid cell expanded 
+as much as possible. However, in the last example
+where we used auto-fill, it did not expand!
+Here's the auto-fit example for comparison: */
+/* html 
+<div class="grid">
+    <div>A</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    outline: 1px solid red;
+    }
+    .grid > * {
+        outline: 1px solid black;
+    }
+    /* auto-fill will fill your row with as many 
+    columns as possible based on the track sizes you provide.
+    This can (only) be visualized with DevTools */
+
+/* Notice that the browser has created two extra 
+cells because they can fit. So, auto-fill always 
+tries to fill your row with as many columns as 
+possible. You may be surprised that these columns 
+are empty – they really are empty. This is a feature. */
+
+
+
+
+
+
+/* Read: https://defensivecss.dev/tip/auto-fit-fill/ */
+/* auto-fill definition:
+auto-fill fills as many columns as possible in a row,
+ even if that means creating empty columns. */
+
+/* auto-fit vs. auto-fill
+auto-fit does not create new columns if there's empty space. 
+If you're using minmax(..., 1fr), it will make the available 
+elements expand and take up the remaining space.
+auto-fill tries to fit as many columns as possible on a 
+single row, which may create empty columns. The main difference 
+between the two can be visualized when fewer items fill the 
+entire row. If you use auto-fit and realize that the layout, 
+in that case, is not ideal, you will most likely need to flip 
+it to auto-fill. */
+
+
+
+
+
+
+
+/* html: 
+<h1>Visualize auto-fill</h1>
+    <div class="grid">
+        <div>A</div>
+        <div>B</div>
+    </div> */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .grid > * {
+        outline: 1px solid black;
+    }
+
+
+
+
+
+/* html 
+<h1>Visualize auto-fit vs. auto-fill</h1>
+<h2>auto-fit</h2>
+<div class="auto-fit-layout">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div>
+<h2>auto-fill</h2>
+<div class="auto-fill-layout">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+* {box-sizing: border-box;}
+body {margin: 0;}
+
+.auto-fit-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+.auto-fill-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+.auto-fit-layout > *, .auto-fill-layout > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+
+/* html 
+<div class="container">
+    <h1>Responsive grid of boxes</h1>
+    <div class="grid-boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div> */
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.grid-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+.box {
+    border-radius: 4px;
+    background: #0074D9;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+/* gap: row-gap + column-gap
+Similarly to how it was used in flexbox, the gap 
+property is a shorthand for row-gap and column-gap. */
+.grid {
+    display: grid;
+    gap: 10px;
+}
+/* You can either provide different values individually, for example: */
+.grid {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+/* Or, using the shorthand: */
+.grid {
+    display: grid;
+    gap: 10px 20px; /* row-gap column-gap */
+}
+
+
+
+
+
+
+/* Handling tiny viewport sizes
+When we wrote the following code: */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+/* we ended up with a grid of columns that was 
+responsive. However, once you go below 200px, 
+you will have a horizontal scrollbar because 
+the smallest grid track size of 200px has been reached.
+This is usually not a problem since you won't be able 
+to fit content below 200px. However, if that causes
+an issue with your layout and you want to go a 
+step further and fix it, you can replace 200px with min(100%, 200px).
+This will choose the maximum between 100% and 200px.
+On smaller devices, that will be 100%, which will 
+prevent the horizontal scrollbar from showing up.
+The final code would look like the following: */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+}
+
+
+
+
+/* Practise exercise 106. - Responsive grid of cards */
+/* Practise exercise 106. - Responsive calendar II */
+/* Practise exercise 106. - Holy grail layout */
+
+
+
+
+
+
+
+/* INTRO TO GRID LINES */
+
+/* write this code and see browser lines */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+}
+/* So, we have three grid tracks created by 
+grid-template-columns: 1fr 1fr 1fr, which 
+end up creating four grid lines. The browser 
+automatically numbers these grid lines from 1 to 4. */
+
+
+
+
+
+/* Positioning grid items with grid-column-start */
+/* html 
+<div class="grid">
+    <div class="box-a">A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+}
+.grid > * {
+    padding: 15px;
+    outline: 1px solid black;
+}
+.box-a {
+    grid-column-start: 2;
+}
+/* visualize in dev tools */
+
+
+
+
+
+
+/* html 
+<h1>Visualize grid lines</h1>
+<div class="grid">
+    <!-- no grid items provided on purpose -->
+</div> */
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+    gap: 10px;
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+
+/* html 
+<h1>Visualize grid lines</h1>
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+    gap: 10px;
+}
+.box-a {
+    grid-column-start: 3;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* html 
+<main class="container">
+    <h1>Calendar</h1>
+    <div class="calendar">
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+    </div>
+</main> */
+.container {
+    max-width: 960px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+.calendar {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 75px);
+}
+.day {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.day:first-child {
+    grid-column-start: 3;
+}
+@media (max-width: 35rem) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+    .day:first-child {
+        grid-column-start: 1;
+    }
+}
+
+
+
+
+
+
+
+/* span multiple cells */
+
+/* html 
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+    <div class="box-d">D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+}
+.box-a {
+    grid-column-start: span 2;
+    border: 3px solid red;
+}
+.box-b, .box-c, .box-d {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+/* Specifying the end position with grid-column-end */
+
+/* <div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+}
+.box-a {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: 3px solid red;
+}
+.box-b, .box-c {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* This same example can be rewritten by replacing
+grid-column-end: 4 with grid-column-end: span 2. 
+It instructs the browser to start at position 2 
+and then take up a total of 2 cells (which ends up being line 4): */
+
+/* <div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+}
+.box-a {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    border: 3px solid red;
+}
+.box-b, .box-c {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* The grid-column shorthand */
+/* grid-column: grid-column-start / grid-column-end; */
+
+/* For example, grid-column-start: 3 and grid-column-end: 
+5 can be rewritten to: grid-column: 3 / 5. */
+
+/* Also, grid-column-start: 3 and grid-column-end: 
+span 2 can be rewritten to grid-column: 3 / span 2 */
+.item {
+    grid-column: 2 / -1;
+}
+
+
+
+
+
+
+
+/* <h1>Expand</h1>
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+    <div class="box-d">D</div>
+</div> */
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 150px;
+    gap: 10px;
+}
+.box-a {
+    grid-column: 2 / 5;
+    /* try */
+    /* grid-column: 2 / span 3 */
+    /* grid-column: 2 / -1 */
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* Grid-row and grid-area */
+
+/* grid-row: start / end; */
+
+/* <div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+    <div class="box-d">D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+}
+.box {
+    padding: 15px;
+    border: 1px solid black;
+}
+.box-a {
+    grid-row: 1 / 3;
+    border: 3px solid red;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* Combining grid-column and grid-row */
+
+/* <div class="grid">
+    <div class="box-a">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+    <div class="box">F</div>
+    <div class="box">G</div>
+    <div class="box">H</div>
+    <div class="box">I</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+}
+.box {
+    padding: 15px;
+    border: 1px solid black;
+}
+.box-a {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    border: 3px solid red;
+}
+
+
+
+
+
+
+
+/* grid-area alternative syntax */
+
+/* grid-area: row-start / column-start / row-end / column-end; */
+.box-a {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+}
+/* to: */
+.box-a {
+    /* row-start / column-start / row-end / column-end; */
+    grid-area: 1 / 2 / span 2 / 3;
+}
+
+
+
+
+
+
+
+/* <h1>Visualize grid lines</h1>
+<div class="grid">
+    <div class="box-a">A</div>
+</div> */
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 100px 50px 50px;
+    gap: 10px;
+    outline: 1px solid black;
+}
+.box-a {
+    grid-column: 3;
+    grid-row: 2 / span 2;
+    outline: 1px solid red;
+}
+
+
+
+
+
+
+
+
+/* <div class="page-layout">
+    <header><p>Header content</p></header>
+    <nav><p>nav content</p></nav>
+    <main><p>main content here</p></main>
+    <aside><p>aside/ads content</p></aside>
+    <footer><p>footer content</p></footer>
+</div> */
+.page-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+}
+header {
+    grid-column: 1 / -1;
+}
+footer {
+    grid-column: 1 / -1;
+}
+.page-layout > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* Named grid lines */
+
+/* To give a name to a grid line, you need to add its 
+name between square brackets in the grid-template-columns 
+or grid-template-rows definition. For example: */
+.grid {
+    display: grid;
+    grid-template-columns: [sidebar] 1fr;
+}
+/* If you want to give the other line a name, you will 
+have to place its name after the track size (1fr in this example): */
+.grid {
+    display: grid;
+    grid-template-columns: [sidebar] 1fr [last];
+}
+
+
+
+
+
+
+/* <div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 
+    [side] 100px [main] 1fr [ads] 100px [last];
+}
+.box-a {
+    grid-column: side / last;
+}
+.box-b {
+    grid-column: side / ads;
+}
+.grid > * {
+    padding: 20px;
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* Remember that grid-column: side / last is the same as: */
+/* grid-column-start: side;
+grid-column-end: last; */
+/* Which can also be written using numbers. 
+In this case, it would be equivalent to the following: */
+/* grid-column-start: 1;
+grid-column-end: 4;  or -1 */ 
+
+
+
+
+
+
+
+/* <h1>Named grid lines</h1>
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 
+    [side] 100px [main] 1fr [ads] 100px [last];
+}
+.box-a {
+    grid-column: side / last;
+}
+.box-b {
+    grid-column: side / ads;
+}
+.grid > * {
+    padding: 20px;
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* <h1>Expand</h1>
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+    <div class="box-d">D</div>
+</div> */
+.grid {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 
+    [first] 1fr [second] 1fr [third] 1fr [forth] 1fr [fifth];
+    grid-template-rows: 75px 150px;
+    gap: 10px;
+}
+.box-a {
+    grid-column: second / fifth;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+
+/* <main>
+    <h1>Article</h1>
+    <div class="grid">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Corrupti ducimus expedita quos ab maxime iure necessitatibus, 
+            nostrum quia cum quis commodi, a labore nulla aut perferendis 
+            aliquid, iusto provident quibusdam. Provident fuga asperiores eum,
+            maxime doloribus doloremque fugiat assumenda dignissimos.</p>
+        </div>
+        <div class="breakout">This item expands the entire grid!</div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                 Aut velit, natus odio saepe cumque, dolorum nihil asperiores 
+                 officiis sed perferendis eaque quibusdam neque tenetur magnam 
+                 hic molestiae, rerum aperiam voluptates nam doloribus similique. 
+                 Laborum temporibus recusandae eos laboriosam optio! Doloremque?</p>
+        </div>
+    </div>
+</main> */
+.grid {
+    background-color: #AAAAAA;
+    display: grid;
+    grid-template-columns: 
+    [full-start] minmax(0, 1fr) [content-start] minmax(auto, 40ch) 
+    [content-end] minmax(0, 1fr) [full-end];
+}
+.content {
+    grid-column: content-start / content-end;
+}
+.breakout {
+    background: #39CCCC;
+    grid-column: full-start / full-end;
+}
+.grid > * {
+    padding: 20px;
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* Lines of named areas */
+
+/* <h1>Named areas lines</h1>    
+<div class="grid">
+    <div class="box-a">A</div>
+    <div class="box-b">B</div>
+    <div class="box-c">C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    grid-template-areas: 
+    "first second third"
+    "first second third";
+}
+.box-a {
+    grid-column: second-start / third-end;
+}
+.grid > * {
+    outline: 1px solid black;
+    padding: 40px;
+}
+
+
+
+
+
+
+/* Using the same grid line name */
+
+/* <div class="grid">
+  <div class="box-a">A</div>
+  <div>B</div>
+  <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, [col] 1fr);
+}
+.box-a {
+    grid-column: col 2 / col 5;
+}
+.grid > * {
+    padding: 20px;
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* IMPLICIT GRID */
+
+/* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* The grid layout defines one row of 100px divided into 
+two equal columns. This means we have two grid cells. 
+However, we provided four grid items. In this case, the
+browser automatically creates a new row track. This new
+ row track is implicitly created by the browser.
+In contrast, the first row is explicitly created by grid-template-rows: 100px.
+Moreover, you should notice that this new row has a different 
+size than the one provided by grid-template-rows. Why?
+That's because implicit row tracks are controlled by the 
+grid-auto-rows property, which defaults to auto.
+So, the CSS code above is equivalent to the following: */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px; /* first row */
+    grid-auto-rows: auto; /* implicitly created rows */
+}
+/* Let's take another example where we have two 
+explicit rows and more items than cells: */
+/* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* This time we have two explicit rows and one explicit column. 
+This means we have room for two grid cells. However, since we 
+provided three grid items, the last grid item will create a new implicit row. */
+
+/* Customizing grid-auto-rows */
+
+/* Let's customize the implicit row size from the example above: */
+/* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 100px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Now all the rows have the same size because the 
+implicit row has a size of 100px, which matches the 
+one provided by grid-template-rows.
+In this case, you can also skip defining grid-template-rows
+ altogether and have all the rows implicit: */
+ /* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100px;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+/* Use cases */
+/* Being able to control implicit tracks allows you to borrow 
+a bit of the behavior from flexbox. Flexbox's layout is dictated 
+by the content. On the other hand, we've so far seen that Grid's 
+layout is dictated by the layout you define with the template 
+(grid-template-columns and grid-template-rows). We often always 
+needed to know the number of items in the grid when defining the layout.
+However, having implicit tracks allows your layout to be more 
+flexible with more (or fewer) grid items.
+This can be useful in a photo gallery with a variable number of 
+photos, a grid of cards with a variable number of cards, etc.
+It also opens up many additional use cases. Remember that CSS 
+Grid aims to give you the tools to create many advanced layouts 
+(rather than a set of specific layouts).
+ */
+
+/* Flow direction */
+/* The default flow direction is row. The items in a grid 
+are placed by filling each row. If there are more 
+items than cells, new rows are added.
+However, this behavior can be changed for more flexibility.
+The grid-auto-flow property is used to change the default 
+flow direction of the grid. This property only works on the grid container.
+By default, it's set to row, but you can also set it to column. 
+In that case, the grid items will be placed by filling each 
+column. If there are more items than cells, new columns are added.
+Here's what happens if we add grid-auto-flow: column to the first example: */
+/* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-auto-flow: column;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Notice how the C and D boxes created two new implicit column tracks.
+Now that we've got the grid-auto-flow set to column, we can customize 
+the size of implicitly created column tracks with the grid-auto-columns 
+property. Let's set it to 1fr: */
+/* <div class="grid">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div>
+ */
+ .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* first 2 columns */
+    grid-template-rows: 100px;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr; /* implicit columns */
+}
+.grid > * {
+    outline: 1px solid black;
+} 
+
+
+
+
+
+
+/* <main class="container">
+        <h1>Calendar</h1>
+        <div class="calendar">
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+        </div> */
+
+        /* first approach */
+        .container {
+            max-width: 960px;
+            padding-inline: 20px;
+            margin-inline: auto;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui;
+            margin: 0;
+        }
+        .calendar {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5, 75px);
+        }
+        .day {
+            border: 1px solid #A7ADBA;
+            /* The below won't be necessary later... */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        @media (max-width: 25rem) {
+            .calendar {
+                 grid-template-columns: 1fr;
+                grid-auto-rows: 75px;
+            }
+        }
+        /* second approach */
+        .container {
+            max-width: 960px;
+            padding-inline: 20px;
+            margin-inline: auto;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui;
+            margin: 0;
+        }
+        .calendar {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(7, 1fr);
+            grid-auto-rows: 75px;
+        }
+        .day {
+            border: 1px solid #A7ADBA;
+            /* The below won't be necessary later... */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        @media (max-width: 25rem) {
+            .calendar {
+                 grid-template-columns: 1fr;
+            }
+        }
+
+        
+
+
+/* Grid placement algorithms */
+
+/* Before we discuss the grid placement algorithms, we'd like to mention 
+one more use case where implicit tracks may be created.
+Using grid-column and grid-row, you can place an item outside the 
+explicit grid. In that case, the necessary tracks will be generated. Here's an example: */
+
+/* <div class="grid">
+    <div class="box">Box</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+}
+.box {
+    grid-column: 4;
+    grid-row: 4;
+    padding: 10px;
+    outline: 1px solid black;
+}
+/* The grid above creates two columns and two rows; this
+means we have three lines in the column direction and three
+lines in the row direction. However, we're placing the 
+.box on line 4 and row 4, which don't explicitly exist. 
+The browser will then create these lines implicitly. */
+
+/* The track in the column direction between line 3 and line 
+4 is not visible because it has a size of auto by default. 
+The same applies to the track in the row direction between line 3 and line 4.
+In this case, we can set the grid-auto-columns and grid-auto-rows to 50px: */
+/* <div class="grid">
+    <div class="box">Box</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-auto-columns: 50px;
+    grid-auto-rows: 50px;
+}
+.box {
+    grid-column: 4;
+    grid-row: 4;
+    padding: 10px;
+    outline: 1px solid black;
+}
+
+/* Dense placement algorithm */
+
+/* By default, the grid placement algorithm places the grid 
+items one by one in the forward direction. It never goes back 
+to fill empty spots. Here's an example where we set the 
+grid-column on two boxes, which would end up creating two empty cells: */
+/* <div class="grid">
+    <div class="box1">A</div>
+    <div class="box2">B</div>
+    <div class="box3">C</div>
+    <div class="box4">D</div>
+    <div class="box5">E</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px;
+}
+.box1 {
+    grid-column: 2 / 3;
+}
+.box4 {
+    grid-column: 2 / 3;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Notice how we have two empty grid cells. That's because 
+the grid placement algorithm, by default, 
+doesn't backtrack and try to fill that.
+This behavior can be changed by using the dense 
+placement algorithm with the same grid-auto-flow property we 
+learned about in the previous lesson. This can 
+either be in the row or column direction. */
+/* grid-auto-flow: row dense;
+ OR 
+grid-auto-flow: column dense; */
+
+/* The row dense value will try to fill empty cells with items 
+that can fit in it in by going through the grid layout again 
+in the row direction. The column dense will do the 
+same but in the column direction.
+This will most likely place items out of order compared to 
+their DOM order. This may be a problem for accessibility 
+if the items are tabbable (we'll discuss that in the forms chapter). 
+You may want to limit this use case to artistic use cases, 
+such as a list of photos where the order does not matter.
+Let's take a look at the code above with grid-auto-flow: row dense: */
+
+/* <div class="grid">
+    <div class="box1">A</div>
+    <div class="box2">B</div>
+    <div class="box3">C</div>
+    <div class="box4">D</div>
+    <div class="box5">E</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 50px;
+    grid-auto-flow: row dense;
+}
+.box1 {
+    grid-column: 2 / 3;
+}
+.box4 {
+    grid-column: 2 / 3;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+/* Notice how the empty spots were filled. This is not 
+to be guaranteed. It's only the case if some grid items can
+fit in the empty cells that were left empty. */
+/* This is different than masonry layouts. At the time 
+of writing, no browser supports CSS masonry layouts. */
+
+
+
+
+
+
+/* <main>
+        <h1>Photo grid</h1>
+        <div class="photo-grid">
+            <div class="navy medium"></div>
+            <div class="blue large"></div>
+            <div class="maroon"></div>
+            <div class="red medium"></div>
+            <div class="orange"></div>
+            <div class="maroon large"></div>
+            <div class="navy"></div>
+            <div class="red large"></div>
+            <div class="blue"></div>
+            <div class="orange"></div>
+        </div>
+    </main> */
+    .navy {
+        background-color: #001f3f;
+    }
+    .blue {
+        background-color: #0074D9;
+    }
+    .maroon {
+        background-color: #85144b;
+    }
+    .red {
+        background-color: #FF4136;
+    }
+    .orange {
+        background-color: #FF851B;
+    } 
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: system-ui;
+        margin: 0;
+    }
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          grid-auto-rows: 100px;
+        grid-auto-flow: row dense;
+    }
+    .medium {
+        grid-column-end: span 2;
+    }
+    .large {
+        grid-column-end: span 3;
+    }
+    
+    
+
+    
+
+/*<main>
+        <h1>Photo grid</h1>
+        <div class="photo-grid">
+            <div class="navy medium"></div>
+            <div class="blue large"></div>
+            <div class="maroon"></div>
+            <div class="red medium"></div>
+            <div class="orange"></div>
+            <div class="maroon large"></div>
+            <div class="navy"></div>
+            <div class="red large"></div>
+            <div class="blue"></div>
+            <div class="orange"></div>
+        </div>
+    </main>  */
+    .navy {
+        background-color: #001f3f;
+    }
+    .blue {
+        background-color: #0074D9;
+    }
+    .maroon {
+        background-color: #85144b;
+    }
+    .red {
+        background-color: #FF4136;
+    }
+    .orange {
+        background-color: #FF851B;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: system-ui;
+        margin: 0;
+    }
+    .photo-grid {
+        height: 100vh;
+        height: 100dvh;
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column dense;
+    }
+    .medium {
+        grid-row-end: span 2;
+        grid-column-end: span 2;
+    }
+    .large {
+        grid-row-end: span 3;
+        grid-column-end: span 3;
+    }
+
+
+
+
+    
+    /* Justify vs. align & content vs. items */
+
+    /* <div class="grid">
+    <div>Start</div>
+    <div>End</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    justify-content: space-between;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* <div class="grid">
+    <div>First item</div>
+    <div>Second</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* <div class="grid">
+    <div>First item</div>
+    <div>Second</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* <div class="grid">
+    <div>First</div>
+    <div>Second</div>
+    <div>Third</div>
+    <div>Fourth</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    align-content: space-between;
+    height: 100vh;
+}
+body {
+    margin: 0;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+
+/* <div class="grid">
+    <div>First</div>
+    <div>Second</div>
+</div> */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* Self placement and shorthands  */
+
+/* <div class="grid">
+    <div class="first">First</div>
+    <div class="second">Second</div>
+</div> */
+grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+}
+.second {
+  justify-self: center;
+}
+.grid > * {
+    outline: 1px solid black;
+}
+
+
+
+
+
+/* Shorthands */
+/* It's common to need to center grid items.
+This can be done with the following CSS: */
+.grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+/* Luckily, we can use the place-items shorthand, 
+which sets the align-items and justify-items 
+properties at the same time: */
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+/* <div class="avatar-wrapper">
+<img id="cat" 
+src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1645464030/learnhtmlcss/images/cat.jpg" 
+width="150" height="150" 
+alt="Cat on a snowy day" class="avatar" />
+</div> */
+.avatar-wrapper {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.avatar {
+    border-radius: 50%;
+    border: 4px solid #001f3f;
+}
+body {
+    margin: 0;
+}
+
+
+
+
+
+
+/*  <main>
+        <h1>Grid of logos</h1>
+        <div class="grid-logos">
+<img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1646663143/learnhtmlcss/learn-html-css.svg" alt="Learn HTML CSS" width="100" height="100" />
+<img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/q_auto,f_auto,w_200/v1586529793/learnprogramming/logo.png" alt="Learn Programming" width="100" height="100" />
+<img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/q_auto,f_auto,w_200/v1578846496/learnjavascript/learn-javascript.png" alt="Learn JavaScript" width="100" height="100" />
+<img src="https://res.cloudinary.com/dbfn5lnvx/image/upload/v1579439273/react-tutorial/react-tutorial.svg" alt="React Tutorial" width="100" height="100" />
+        </div>
+    </main> */
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: system-ui;
+        margin: 0;
+    }
+    .grid-logos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,  minmax(150px, 1fr));
+        place-items: center;
+        gap: 10px;
+    }
+
+
+/* Do and read 111. Overlapping items */
+/* Do and read: 112. Grid outro */
+/* Do and read: 113. Hex grid */

@@ -1,0 +1,21 @@
+div {
+    width: 200px;
+    height: 400px;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    margin: 100px;
+    animation-name: example;
+    animation-duration: 10s;
+}
+@keyframes example {
+    0%{border-color: antiquewhite;}
+    10% {border-color: lightblue;}
+    25% {border-color: lightcoral;}
+    50% {border-color: lightsalmon;}
+    60% {border-color: lightgreen;}
+    75%{border-color: lightskyblue;}
+    90% {
+        border-color: lightslategray;
+    }
+    100% {border-color: blueviolet;}
+}

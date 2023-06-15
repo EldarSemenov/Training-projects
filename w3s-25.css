@@ -1,0 +1,40 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+@keyframes example {
+    0%{
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotate(20deg);
+    }
+    25% {
+        background-color: dodgerblue;
+        left: 200px;
+        top: 0px;
+        transform: rotate(40deg);
+    }
+    50% {
+        background-color: lightgreen;
+        left: 200px;
+        top: 200px;
+        transform: rotate(110deg);
+    }
+    75% {
+        background-color: lightseagreen; 
+        left: 0px;
+        top: 200px;
+        transform: rotate(180deg);
+    }
+    100% {
+        background-color: lightcoral;
+        left: 0px;
+        top: 0px;
+    }
+}

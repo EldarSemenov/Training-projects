@@ -1,0 +1,59 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    /* animation-delay: 0.5; */
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+body {
+    animation-name: body-sample;
+    animation-duration: 8s;
+}
+@keyframes example {
+    0% {
+        background: dodgerblue;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background: lightcoral;
+        left: 300px;
+        top: 0;
+    }
+    50% {
+        background: lightcyan;
+        left: 300px;
+        top: 300px;
+    }
+    75% {
+        background: lightgoldenrodyellow;
+        left: 0;
+        top: 300px;
+    }
+    100% {
+        background: lightseagreen;
+        left: 0;
+        top: 0;
+    }
+}
+@keyframes body-sample {
+    0% {
+        background: black;
+    }
+    25% {
+        background: lightgreen;
+    }
+    50% {
+        background: black;
+    }
+    75% {
+        background: lightseagreen;
+    }
+    100% {
+        background: black;
+    }
+}

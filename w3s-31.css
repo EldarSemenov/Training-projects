@@ -1,0 +1,14 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: dodgerblue;
+    position: relative;
+    animation: example 5s linear 2s infinite alternate;
+}
+@keyframes example {
+    0% {background: lightyellow; left: 0; top: 0;}
+    25% {background: lightsteelblue; left: 300px; top: 0;}
+    50% {background: lightslategray; left: 300px; top: 300px;}
+    75% {background: lightskyblue; left: 0; top: 300px;}
+    100% {background: lightseagreen; left: 0; top: 0;}
+}

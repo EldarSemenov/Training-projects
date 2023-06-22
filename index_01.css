@@ -1,0 +1,48 @@
+.nav-tabs {
+    position: relative;
+    margin: 0 0 40px 0;
+}
+.nav-tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+}
+.nav-tabs li {
+    display: inline-block;
+}
+.nav-tabs .tab {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+    line-height: 1.6;
+    padding: 0.25em;
+}
+.nav-tabs .tab.active {
+    border-bottom: 7px solid lightseagreen;
+}
+.border-tabs {
+    position: absolute;
+    z-index: -1;
+    bottom: 3px;
+    border-bottom: green solid 1px;
+}
+.tab {
+    all: unset;
+}
+.tab-content {
+    max-width: 450px;
+    display: none;
+}
+.tab-content.show {
+    display: block;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.hidden {
+    display: none;
+}

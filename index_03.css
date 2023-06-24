@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+.container {
+    max-width: 1200px;
+    border: 0.1px solid black;
+    margin-inline: auto;
+    text-align: center;
+}
+.tabs ul {
+    list-style-type: none;
+}
+.tabs ul li {
+    display: inline-block;
+}
+.tabs .tab {
+    all: unset;
+    cursor: pointer;
+    margin: 0 40px 0 0;
+    font-weight: 100;
+}
+.tabs .tab.active {
+    border-bottom: 5px solid rgb(27, 191, 27);
+}
+.tabs .content.show {
+    display: block;
+}
+.tabs .content {
+    display: none;
+}

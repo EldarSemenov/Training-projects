@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="attendees.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!--  -->
+        <nav>
+            <h1>Attendees</h1>
+        </nav>
+        <!--  -->
+        <ul id="list">
+            <li class="deletable" tabindex="0">Sam Koein</li>
+            <li class="deletable" tabindex="0">Lee Bron</li>
+        </ul>
+        <!--  -->
+        <div id="app-modal" class="modal">
+            <h1><div class="container">New Attendee</div></h1>
+            <div class="container">
+                <form action="" id="ateendee-form">
+                    <label for="name">Name:</label>
+                    <input
+                        type="text"
+                        class="textfield"
+                        placeholder="Name of attendee"
+                        id="attendee-name"
+                    />
+                    <input type="submit" class="btn" />
+                </form>
+            </div>
+        </div>
+        <!--  -->
+        <button id="fab" class="button-fab">✚</button>
+
+        <script type="module" src="attendees.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: lightgray;
+}
+#app-search {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+nav {
+    background-color: lightblue;
+    padding: 30px;
+}
+nav h1 {
+    margin: 0;
+}
+#result-list {
+    list-style: none;
+    padding-left: 0;
+}
+#result-list li {
+    padding: 25px 20px;
+    background-color: white;
+    margin: 15px 0;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+.textfield {
+    padding: 15px;
+    border: 2px solid lightgreen;
+    font-size: 1.3rem;
+    width: 80%;
+    margin-left: 250px;
+    margin-bottom: 20px;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+}

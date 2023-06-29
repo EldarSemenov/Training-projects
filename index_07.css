@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: system-ui;
+    background-color: lightgray;
+}
+.container {
+    margin-inline: auto;
+    border: 1px solid gray;
+    max-width: 560px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 3px;
+    border-radius: 10px;
+}
+.text-result {
+    max-width: 330px;
+    max-height: 200px;
+    border: 1px dotted black;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 500ms;
+}
+.text-result.active {
+    transform: translateX(460px);
+}
+.text-result p {
+    height: 30px;
+    color: darkslategray;
+    font-size: 1.2rem;
+    border: 0.1px solid lightblue;
+    max-width: fit-content;
+    border-radius: 2px;
+    transition: transform 1s;
+}
+.text-result p.show {
+    transform: translateX(120px);
+}

@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    /* outline: 1px dotted black; */
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+}
+:root {
+    --background-color: #f6c4cb;
+}
+#container {
+    width: 960px;
+    margin-inline: auto;
+    /* border: 5px solid black; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#header {
+    border: 3px solid red;
+    background-color: var(--background-color);
+    margin-bottom: 20px;
+}
+#header h1 {
+    line-height: 0.6;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+}
+#navigation {
+    border: 3px solid red;
+    width: 30%;
+    text-align: center;
+    padding: 0;
+}
+#navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+#navigation ul li {
+    border: 2px solid lightpink;
+    width: 80%;
+    margin-inline: auto;
+    margin-bottom: 5px;
+    background-color: #eaf5f1;
+    border-radius: 4px;
+    line-height: 0.9;
+}
+#navigation ul li:hover {
+    background-color: blue;
+    color: #eaf5f1;
+}
+#navigation ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 0.8;
+}
+#navigation ul li a:hover {
+    color: #eaf5f1;
+}
+img {
+    float: right;
+    margin: 10px;
+}
+#centerDoc {
+    border: 3px solid red;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+#centerDoc h3 {
+    text-align: center;
+}
+#centerDoc p:first-of-type::first-letter {
+    color: green;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+#footer {
+    border: 3px solid red;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+@media screen and (max-width: 900px) {
+    img {
+        display: none;
+    }
+    #centerDoc {
+        width: 50%;
+        float: left;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    #footer {
+        clear: both;
+        width: 50%;
+        margin-left: 20px;
+    }
+    #navigation {
+        width: 50%;
+        margin-left: 20px;
+    }
+    #header {
+        width: 50%;
+        text-align: center;
+        margin-left: 20px;
+    }
+    #header h1 {
+        font-size: 1.6rem;
+    }
+}
